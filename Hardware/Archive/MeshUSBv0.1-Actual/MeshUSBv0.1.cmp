@@ -1,0 +1,248 @@
+Cmp-Mod V01 Created by PcbNew date = Sun 15 Sep 2013 23:57:09 EST
+
+BeginCmp
+TimeStamp = /52312498;
+Reference = C1;
+ValeurCmp = 10uF;
+IdModule  = _MUSB_SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /523127FB;
+Reference = C2;
+ValeurCmp = 1uF;
+IdModule  = _MUSB_SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /522EE470;
+Reference = C3;
+ValeurCmp = 100n;
+IdModule  = _MUSB_SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /522FDDF5;
+Reference = C4;
+ValeurCmp = 100n;
+IdModule  = _MUSB_SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /523138F1;
+Reference = C6;
+ValeurCmp = 4.7uF;
+IdModule  = _MUSB_SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /5231354E;
+Reference = C8;
+ValeurCmp = 10uF;
+IdModule  = _MUSB_SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /522FE8A3;
+Reference = C9;
+ValeurCmp = 100n;
+IdModule  = _MUSB_SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /522EDA93;
+Reference = D1;
+ValeurCmp = RX_LED;
+IdModule  = _MUSB_LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /522EDA86;
+Reference = D2;
+ValeurCmp = TX_LED;
+IdModule  = _MUSB_LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52355820;
+Reference = D3;
+ValeurCmp = DIODESCH;
+IdModule  = _MUSB_DO-214BA-Schottky;
+EndCmp
+
+BeginCmp
+TimeStamp = /52353052;
+Reference = D4;
+ValeurCmp = DIODESCH;
+IdModule  = _MUSB_DO-214BA-Schottky;
+EndCmp
+
+BeginCmp
+TimeStamp = /52316257;
+Reference = D5;
+ValeurCmp = LED;
+IdModule  = _MUSB_LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /522EBD3E;
+Reference = F1;
+ValeurCmp = FUSE;
+IdModule  = _MUSB_MF-MSMF050-Fuse;
+EndCmp
+
+BeginCmp
+TimeStamp = /5232A47B;
+Reference = H1;
+ValeurCmp = XBeeLeftPins;
+IdModule  = _MUSB-FEMALE-HEADER-NPPN101BFLC-RC;
+EndCmp
+
+BeginCmp
+TimeStamp = /5232A4B3;
+Reference = H2;
+ValeurCmp = XBeeRightPins;
+IdModule  = _MUSB-FEMALE-HEADER-NPPN101BFLC-RC;
+EndCmp
+
+BeginCmp
+TimeStamp = /52312912;
+Reference = L1;
+ValeurCmp = 10uH;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /522EB9C4;
+Reference = Li-Battery1;
+ValeurCmp = BAT2;
+IdModule  = _MUSB_MPD-BK-5033_2450BatteryHolder;
+EndCmp
+
+BeginCmp
+TimeStamp = /522EB4BD;
+Reference = P1;
+ValeurCmp = USB_4;
+IdModule  = _MUSB_USB-A-PCB;
+EndCmp
+
+BeginCmp
+TimeStamp = /523120A0;
+Reference = P2;
+ValeurCmp = PVCell;
+IdModule  = PIN_ARRAY_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /52353C64;
+Reference = Q1;
+ValeurCmp = MOS_P;
+IdModule  = SOT23;
+EndCmp
+
+BeginCmp
+TimeStamp = /52300256;
+Reference = R1;
+ValeurCmp = 22R;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /523001D7;
+Reference = R2;
+ValeurCmp = 22R;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /522FE6E8;
+Reference = R3;
+ValeurCmp = 10k;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /523131C1;
+Reference = R4;
+ValeurCmp = 3.3M;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /523131D0;
+Reference = R5;
+ValeurCmp = 1M;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /52314992;
+Reference = R6;
+ValeurCmp = 33R;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /522FF148;
+Reference = R8;
+ValeurCmp = 270;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /522FF155;
+Reference = R9;
+ValeurCmp = 270;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /52316266;
+Reference = R10;
+ValeurCmp = R;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /522EB270;
+Reference = U1;
+ValeurCmp = XBEE;
+IdModule  = _MUSB_XBee_Board_OUTLINE_ONLY;
+EndCmp
+
+BeginCmp
+TimeStamp = /52312078;
+Reference = U3;
+ValeurCmp = LTC3105-MSOP12;
+IdModule  = _MUSB_MSOP12;
+EndCmp
+
+BeginCmp
+TimeStamp = /522FDA2E;
+Reference = U4;
+ValeurCmp = FT231X-SSOP;
+IdModule  = SSOP20;
+EndCmp
+
+BeginCmp
+TimeStamp = /52312087;
+Reference = U5;
+ValeurCmp = LTC4070;
+IdModule  = SSOP8-9;
+EndCmp
+
+BeginCmp
+TimeStamp = /522EBD4D;
+Reference = VR1;
+ValeurCmp = VR0603;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /522EBD5A;
+Reference = VR2;
+ValeurCmp = VR0603;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+EndListe
