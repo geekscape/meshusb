@@ -32,7 +32,7 @@ LIBS:valves
 LIBS:MeshUSB
 LIBS:ATMega256RFR2
 LIBS:opendous
-LIBS:MeshUSBv0.1-cache
+LIBS:MeshUSB-cache
 EELAYER 24 0
 EELAYER END
 $Descr A4 11693 8268
@@ -67,7 +67,7 @@ F 1 "USB_4" V 1150 5250 50  0000 C CNN
 F 2 "" H 1100 5250 60  0000 C CNN
 F 3 "" H 1100 5250 60  0000 C CNN
 	1    1100 5250
-	-1   0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L LEMO2 Li-Battery1
@@ -875,5 +875,5 @@ NoConn ~ 5150 5750
 NoConn ~ 5150 5550
 NoConn ~ 5150 5450
 Text Notes 8650 700  0    60   ~ 0
-Possible changes for v0.2:\nChange 3105 to 3108 for lower current operation?\nZener diode between usb_vdd and gnd.\n3.3v regulator from power sources to xbee pin 1\nSignaling from 3105 that it is not supplying current\nExternal/high voltage power terminal - traditional PV 6-12v\n  Pull DRV off 4070 to pin for high current charging?\nJumpers for... what needs jumpers? Something must. \n  Charge full indicator? Tx/Rx LEDs? USB vdd?\nSwitch instead of diode isolation for USB/PV power selection?\nUSB Mirrored Insertion Footprint - !Impossible!\nDouble Check Diode footprints - usbvdd is suspect.\nMove battery holder up/change left smt header.\nMove PV connector pins.\nReexamine 10k pullup on #rst. Also supply of LEDs - vccio or usbvdd? Change Rs if necessary change on vccio/usbvdd\nTest points?\nL1 is 0805 package.\nFix problem 0.
+Possible changes for v0.2:\nChange 3105 to 3108 for lower current operation?\nZener diode between usb_vdd and gnd.\n3.3v regulator from power sources to xbee pin 1\nSignaling from 3105 that it is not supplying current\nExternal/high voltage power terminal - traditional PV 6-12v\n  Pull DRV off 4070 to pin for high current charging?\nJumpers for... what needs jumpers? Something must. \n  Charge full indicator? Tx/Rx LEDs? USB vdd?\nSwitch instead of diode isolation for USB/PV power selection? -NO!\nUSB Mirrored Insertion Footprint - !Impossible!\nMove battery holder up/change left smt header.\nMove PV connector pins.\nReexamine 10k pullup on #rst. Also supply of LEDs - vccio or usbvdd? Change Rs if necessary change on vccio/usbvdd\nTest points?
 $EndSCHEMATC

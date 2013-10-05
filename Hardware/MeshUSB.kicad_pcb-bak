@@ -3,7 +3,7 @@
   (general
     (links 67)
     (no_connects 0)
-    (area 133.349999 97.699999 163.850001 138.590001)
+    (area 130.504334 95.8996 167.053222 140.089)
     (thickness 1.6)
     (drawings 21)
     (tracks 395)
@@ -32,7 +32,7 @@
   )
 
   (setup
-    (last_trace_width 0.3048)
+    (last_trace_width 0.254)
     (user_trace_width 0.3048)
     (trace_clearance 0.254)
     (zone_clearance 0.2032)
@@ -60,31 +60,31 @@
     (aux_axis_origin 133.4 138.8)
     (visible_elements FFFFFB3F)
     (pcbplotparams
-      (layerselection 3178497)
+      (layerselection 284196865)
       (usegerberextensions true)
       (excludeedgelayer true)
       (linewidth 0.150000)
       (plotframeref false)
       (viasonmask false)
       (mode 1)
-      (useauxorigin false)
+      (useauxorigin true)
       (hpglpennumber 1)
       (hpglpenspeed 20)
       (hpglpendiameter 15)
       (hpglpenoverlay 2)
       (psnegative false)
       (psa4output false)
-      (plotreference true)
-      (plotvalue true)
+      (plotreference false)
+      (plotvalue false)
       (plotothertext true)
       (plotinvisibletext false)
       (padsonsilk false)
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory Gerbers/))
   )
 
   (net 0 "")
@@ -1424,91 +1424,6 @@
     )
   )
 
-  (module _MUSB_XBee_Board_NO_PADS (layer F.Cu) (tedit 5235B739) (tstamp 52320491)
-    (at 148.501 105.004)
-    (path /522EB270)
-    (fp_text reference U1 (at -6.35 7.62 90) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
-    )
-    (fp_text value XBEE (at 4.445 11.43) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
-    )
-    (fp_text user AD2 (at 9.825 4.0005 90) (layer F.SilkS) hide
-      (effects (font (size 0.45 0.45) (thickness 0.1125)))
-    )
-    (fp_text user AD3 (at 9.825 5.99948 90) (layer F.SilkS) hide
-      (effects (font (size 0.45 0.45) (thickness 0.1125)))
-    )
-    (fp_text user AD6 (at 9.825 8.13 90) (layer F.SilkS) hide
-      (effects (font (size 0.45 0.45) (thickness 0.1125)))
-    )
-    (fp_text user PE5 (at 9.825 11.99896 90) (layer F.SilkS) hide
-      (effects (font (size 0.45 0.45) (thickness 0.0875)))
-    )
-    (fp_text user AD4 (at 9.825 18.00098 90) (layer F.SilkS) hide
-      (effects (font (size 0.45 0.45) (thickness 0.0875)))
-    )
-    (fp_text user AD7 (at 9.825 15.99946 90) (layer F.SilkS) hide
-      (effects (font (size 0.45 0.45) (thickness 0.0875)))
-    )
-    (fp_text user MSI/SCL (at 9.825 14.00048 90) (layer F.SilkS) hide
-      (effects (font (size 0.35 0.35) (thickness 0.0875)))
-    )
-    (fp_text user AD5 (at 9.825 9.99998 90) (layer F.SilkS) hide
-      (effects (font (size 0.45 0.45) (thickness 0.075)))
-    )
-    (fp_text user AD1 (at 9.85 1.99898 90) (layer F.SilkS) hide
-      (effects (font (size 0.45 0.45) (thickness 0.075)))
-    )
-    (fp_text user AD0 (at 9.85 0 90) (layer F.SilkS) hide
-      (effects (font (size 0.45 0.45) (thickness 0.075)))
-    )
-    (fp_text user 3.3V (at -9.85 0 90) (layer F.SilkS) hide
-      (effects (font (size 0.5 0.5) (thickness 0.125)))
-    )
-    (fp_text user TX0 (at -9.85 1.99898 90) (layer F.SilkS) hide
-      (effects (font (size 0.45 0.45) (thickness 0.0875)))
-    )
-    (fp_text user RX0 (at -9.85 4.0005 90) (layer F.SilkS)
-      (effects (font (size 0.45 0.45) (thickness 0.0875)))
-    )
-    (fp_text user TX1 (at -9.85 5.99948 90) (layer F.SilkS) hide
-      (effects (font (size 0.45 0.45) (thickness 0.0875)))
-    )
-    (fp_text user ~RST (at -9.75 8.001 90) (layer F.SilkS) hide
-      (effects (font (size 0.45 0.45) (thickness 0.0875)))
-    )
-    (fp_text user RSSI (at -9.85 9.99998 90) (layer F.SilkS) hide
-      (effects (font (size 0.45 0.45) (thickness 0.0875)))
-    )
-    (fp_text user PWM1 (at -9.85 11.99896 90) (layer F.SilkS) hide
-      (effects (font (size 0.4 0.4) (thickness 0.0875)))
-    )
-    (fp_text user RX1 (at -9.85 14.00048 90) (layer F.SilkS) hide
-      (effects (font (size 0.45 0.45) (thickness 0.1125)))
-    )
-    (fp_text user DTR/SDA (at -9.85 15.99946 90) (layer F.SilkS) hide
-      (effects (font (size 0.35 0.35) (thickness 0.0875)))
-    )
-    (fp_text user GND (at -9.85 18.00098 90) (layer F.SilkS) hide
-      (effects (font (size 0.5 0.5) (thickness 0.125)))
-    )
-    (fp_line (start -12.446 19.558) (end -12.446 20.574) (layer F.SilkS) (width 0.381))
-    (fp_line (start 12.446 19.558) (end 12.446 20.574) (layer F.SilkS) (width 0.381))
-    (fp_line (start -12.446 19.558) (end -12.446 -0.254) (layer F.SilkS) (width 0.381))
-    (fp_line (start 12.446 0) (end 12.446 -0.254) (layer F.SilkS) (width 0.381))
-    (fp_line (start 12.446 19.558) (end 12.446 0) (layer F.SilkS) (width 0.381))
-    (fp_line (start -12.446 20.574) (end 12.446 20.574) (layer F.SilkS) (width 0.381))
-    (fp_line (start 12.446 -0.254) (end 5.08 -6.604) (layer F.SilkS) (width 0.381))
-    (fp_line (start -12.446 -0.254) (end -5.08 -6.604) (layer F.SilkS) (width 0.381))
-    (fp_line (start -5.08 -6.604) (end 5.08 -6.604) (layer F.SilkS) (width 0.381))
-    (model Radio/Xbee_patch.wrl
-      (at (xyz 0 0 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 270 0 0))
-    )
-  )
-
   (module _MUSB_MPD-BK-5033_2450BatteryHolder (layer B.Cu) (tedit 523595CA) (tstamp 523411AE)
     (at 148.501 115.94 180)
     (path /522EB9C4)
@@ -1723,6 +1638,89 @@
       (xy -1.79324 1.6002) (xy -1.75768 1.64338) (xy -1.69164 1.71196) (xy -1.59258 1.81102)
       (xy -1.5748 1.82626) (xy -1.49606 1.90246) (xy -1.43002 1.96342) (xy -1.3843 2.00406)
       (xy -1.36398 2.0193)) (layer F.SilkS) (width 0.00254))
+  )
+
+  (module _MUSB_XBee_Board_OUTLINE_ONLY (layer F.Cu) (tedit 5235BC75) (tstamp 52320491)
+    (at 148.501 105.004)
+    (path /522EB270)
+    (fp_text reference U1 (at -6.35 7.62 90) (layer F.SilkS) hide
+      (effects (font (thickness 0.3048)))
+    )
+    (fp_text value XBEE (at 4.445 11.43) (layer F.SilkS) hide
+      (effects (font (thickness 0.3048)))
+    )
+    (fp_line (start -12.446 0) (end -12.446 -0.254) (layer F.SilkS) (width 0.381))
+    (fp_line (start -6.83 -5.1) (end -11 -1.5) (layer F.SilkS) (width 0.15))
+    (fp_line (start 6.84 -5.1) (end 10.82 -1.64) (layer F.SilkS) (width 0.15))
+    (fp_text user AD2 (at 9.825 4.0005 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.1125)))
+    )
+    (fp_text user AD3 (at 9.825 5.99948 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.1125)))
+    )
+    (fp_text user AD6 (at 9.825 8.13 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.1125)))
+    )
+    (fp_text user PE5 (at 9.825 11.99896 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.0875)))
+    )
+    (fp_text user AD4 (at 9.825 18.00098 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.0875)))
+    )
+    (fp_text user AD7 (at 9.825 15.99946 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.0875)))
+    )
+    (fp_text user MSI/SCL (at 9.825 14.00048 90) (layer F.SilkS) hide
+      (effects (font (size 0.35 0.35) (thickness 0.0875)))
+    )
+    (fp_text user AD5 (at 9.825 9.99998 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.075)))
+    )
+    (fp_text user AD1 (at 9.85 1.99898 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.075)))
+    )
+    (fp_text user AD0 (at 9.85 0 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.075)))
+    )
+    (fp_text user 3.3V (at -9.85 0 90) (layer F.SilkS) hide
+      (effects (font (size 0.5 0.5) (thickness 0.125)))
+    )
+    (fp_text user TX0 (at -9.85 1.99898 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.0875)))
+    )
+    (fp_text user RX0 (at -9.85 4.0005 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.0875)))
+    )
+    (fp_text user TX1 (at -9.85 5.99948 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.0875)))
+    )
+    (fp_text user ~RST (at -9.75 8.001 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.0875)))
+    )
+    (fp_text user RSSI (at -9.85 9.99998 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.0875)))
+    )
+    (fp_text user PWM1 (at -9.85 11.99896 90) (layer F.SilkS) hide
+      (effects (font (size 0.4 0.4) (thickness 0.0875)))
+    )
+    (fp_text user RX1 (at -9.85 14.00048 90) (layer F.SilkS) hide
+      (effects (font (size 0.45 0.45) (thickness 0.1125)))
+    )
+    (fp_text user DTR/SDA (at -9.85 15.99946 90) (layer F.SilkS) hide
+      (effects (font (size 0.35 0.35) (thickness 0.0875)))
+    )
+    (fp_text user GND (at -9.85 18.00098 90) (layer F.SilkS) hide
+      (effects (font (size 0.5 0.5) (thickness 0.125)))
+    )
+    (fp_line (start -12.446 19.558) (end -12.446 20.574) (layer F.SilkS) (width 0.381))
+    (fp_line (start 12.446 19.558) (end 12.446 20.574) (layer F.SilkS) (width 0.381))
+    (fp_line (start 12.446 0) (end 12.446 -0.254) (layer F.SilkS) (width 0.381))
+    (fp_line (start -12.446 20.574) (end 12.446 20.574) (layer F.SilkS) (width 0.381))
+    (model Radio/Xbee_patch.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 270 0 0))
+    )
   )
 
   (gr_text ~Rst (at 134.7 113.43) (layer F.SilkS)

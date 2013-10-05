@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by PcbNew date = Sun 15 Sep 2013 23:57:09 EST
+Cmp-Mod V01 Created by CvPcb (2013-mar-13)-testing date = Sat 05 Oct 2013 19:08:04 EST
 
 BeginCmp
 TimeStamp = /52312498;
@@ -134,7 +134,7 @@ IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
-TimeStamp = /52353C64;
+TimeStamp = /52355F92;
 Reference = Q1;
 ValeurCmp = MOS_P;
 IdModule  = SOT23;
@@ -221,7 +221,7 @@ BeginCmp
 TimeStamp = /522FDA2E;
 Reference = U4;
 ValeurCmp = FT231X-SSOP;
-IdModule  = SSOP20;
+IdModule  = _MUSB_SSOP20;
 EndCmp
 
 BeginCmp
