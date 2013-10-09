@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-mar-13)-testing date = Sat 05 Oct 2013 19:08:04 EST
+Cmp-Mod V01 Created by CvPcb (2013-mar-13)-testing date = Thu 10 Oct 2013 10:31:04 EST
 
 BeginCmp
 TimeStamp = /52312498;
@@ -85,6 +85,13 @@ IdModule  = _MUSB_LED-0603;
 EndCmp
 
 BeginCmp
+TimeStamp = /5254E5F2;
+Reference = D6;
+ValeurCmp = ZENER;
+IdModule  = ;
+EndCmp
+
+BeginCmp
 TimeStamp = /522EBD3E;
 Reference = F1;
 ValeurCmp = FUSE;
@@ -95,14 +102,14 @@ BeginCmp
 TimeStamp = /5232A47B;
 Reference = H1;
 ValeurCmp = XBeeLeftPins;
-IdModule  = _MUSB-FEMALE-HEADER-NPPN101BFLC-RC;
+IdModule  = _MUSB-FEMALE-HEADER-NPPN101BFLC-RC-Pin1Left;
 EndCmp
 
 BeginCmp
 TimeStamp = /5232A4B3;
 Reference = H2;
 ValeurCmp = XBeeRightPins;
-IdModule  = _MUSB-FEMALE-HEADER-NPPN101BFLC-RC;
+IdModule  = _MUSB-FEMALE-HEADER-NPPN101BFLD-RC-Pin1Right;
 EndCmp
 
 BeginCmp
@@ -155,13 +162,6 @@ IdModule  = _MUSB_SM0603_Resistor;
 EndCmp
 
 BeginCmp
-TimeStamp = /522FE6E8;
-Reference = R3;
-ValeurCmp = 10k;
-IdModule  = _MUSB_SM0603_Resistor;
-EndCmp
-
-BeginCmp
 TimeStamp = /523131C1;
 Reference = R4;
 ValeurCmp = 3.3M;
@@ -199,7 +199,7 @@ EndCmp
 BeginCmp
 TimeStamp = /52316266;
 Reference = R10;
-ValeurCmp = R;
+ValeurCmp = 270;
 IdModule  = _MUSB_SM0603_Resistor;
 EndCmp
 

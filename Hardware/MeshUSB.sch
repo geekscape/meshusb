@@ -116,10 +116,10 @@ $EndComp
 Text GLabel 2150 4450 1    60   Input ~ 0
 USB_VDD
 $Comp
-L GND #PWR01
+L GND #PWR4
 U 1 1 522EC0A5
 P 4250 7600
-F 0 "#PWR01" H 4250 7600 30  0001 C CNN
+F 0 "#PWR4" H 4250 7600 30  0001 C CNN
 F 1 "GND" H 4250 7530 30  0001 C CNN
 F 2 "" H 4250 7600 60  0000 C CNN
 F 3 "" H 4250 7600 60  0000 C CNN
@@ -127,10 +127,10 @@ F 3 "" H 4250 7600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR02
+L GND #PWR2
 U 1 1 522ECD60
 P 2350 5450
-F 0 "#PWR02" H 2350 5450 30  0001 C CNN
+F 0 "#PWR2" H 2350 5450 30  0001 C CNN
 F 1 "GND" H 2350 5380 30  0001 C CNN
 F 2 "" H 2350 5450 60  0000 C CNN
 F 3 "" H 2350 5450 60  0000 C CNN
@@ -195,17 +195,6 @@ F 3 "" H 2550 5100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
-U 1 1 522FE6E8
-P 3150 5200
-F 0 "R3" V 3230 5200 40  0000 C CNN
-F 1 "10k" V 3157 5201 40  0000 C CNN
-F 2 "" V 3080 5200 30  0000 C CNN
-F 3 "" H 3150 5200 30  0000 C CNN
-	1    3150 5200
-	1    0    0    -1  
-$EndComp
-$Comp
 L C C9
 U 1 1 522FE8A3
 P 5500 4950
@@ -243,10 +232,10 @@ F 3 "" H 6300 6050 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
+L GND #PWR1
 U 1 1 522FF942
 P 1450 7400
-F 0 "#PWR03" H 1450 7400 30  0001 C CNN
+F 0 "#PWR1" H 1450 7400 30  0001 C CNN
 F 1 "GND" H 1450 7330 30  0001 C CNN
 F 2 "" H 1450 7400 60  0000 C CNN
 F 3 "" H 1450 7400 60  0000 C CNN
@@ -311,10 +300,10 @@ F 3 "" H 1100 3150 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR04
+L GND #PWR3
 U 1 1 52312207
 P 2800 3950
-F 0 "#PWR04" H 2800 3950 30  0001 C CNN
+F 0 "#PWR3" H 2800 3950 30  0001 C CNN
 F 1 "GND" H 2800 3880 30  0001 C CNN
 F 2 "" H 2800 3950 60  0000 C CNN
 F 3 "" H 2800 3950 60  0000 C CNN
@@ -419,10 +408,10 @@ USB_VDD
 Text Notes 1550 7250 0    60   ~ 0
 Zener reverse current between USB-VDD and GND? \nProbably should...
 $Comp
-L GND #PWR05
+L GND #PWR6
 U 1 1 52315DFC
 P 9200 3800
-F 0 "#PWR05" H 9200 3800 30  0001 C CNN
+F 0 "#PWR6" H 9200 3800 30  0001 C CNN
 F 1 "GND" H 9200 3730 30  0001 C CNN
 F 2 "" H 9200 3800 60  0000 C CNN
 F 3 "" H 9200 3800 60  0000 C CNN
@@ -618,12 +607,10 @@ Wire Wire Line
 	4250 7350 4250 7600
 Connection ~ 4250 7350
 Wire Wire Line
-	3350 5850 3150 5850
+	3150 5850 3350 5850
 Connection ~ 4350 4650
 Wire Wire Line
-	3150 5850 3150 5450
-Wire Wire Line
-	3150 4950 3150 4550
+	3150 4850 3150 5850
 Wire Wire Line
 	2150 4550 4150 4550
 Wire Wire Line
@@ -632,7 +619,6 @@ Connection ~ 2150 4550
 Wire Wire Line
 	5600 4050 5850 4050
 Connection ~ 4150 4550
-Connection ~ 3150 4550
 Wire Wire Line
 	4150 4550 4150 4850
 Wire Wire Line
@@ -844,7 +830,7 @@ Connection ~ 1700 7050
 Wire Wire Line
 	2000 7050 2000 6300
 Wire Wire Line
-	1450 7050 2000 7050
+	1450 7050 3000 7050
 Wire Wire Line
 	9900 2150 10300 2150
 Connection ~ 10300 2150
@@ -855,10 +841,10 @@ Wire Wire Line
 Wire Wire Line
 	7800 1350 7900 1350
 $Comp
-L GND #PWR06
+L GND #PWR5
 U 1 1 5235B126
 P 5950 5350
-F 0 "#PWR06" H 5950 5350 30  0001 C CNN
+F 0 "#PWR5" H 5950 5350 30  0001 C CNN
 F 1 "GND" H 5950 5280 30  0001 C CNN
 F 2 "" H 5950 5350 60  0000 C CNN
 F 3 "" H 5950 5350 60  0000 C CNN
@@ -875,5 +861,23 @@ NoConn ~ 5150 5750
 NoConn ~ 5150 5550
 NoConn ~ 5150 5450
 Text Notes 8650 700  0    60   ~ 0
-Possible changes for v0.2:\nChange 3105 to 3108 for lower current operation?\nZener diode between usb_vdd and gnd.\n3.3v regulator from power sources to xbee pin 1\nSignaling from 3105 that it is not supplying current\nExternal/high voltage power terminal - traditional PV 6-12v\n  Pull DRV off 4070 to pin for high current charging?\nJumpers for... what needs jumpers? Something must. \n  Charge full indicator? Tx/Rx LEDs? USB vdd?\nSwitch instead of diode isolation for USB/PV power selection? -NO!\nUSB Mirrored Insertion Footprint - !Impossible!\nMove battery holder up/change left smt header.\nMove PV connector pins.\nReexamine 10k pullup on #rst. Also supply of LEDs - vccio or usbvdd? Change Rs if necessary change on vccio/usbvdd\nTest points?
+Still TODO for v0.2:\nChange 3105 to 3108 for lower current operation?\n3.3v regulator from power sources to xbee pin 1\nSignaling from 3105 that it is not supplying current\nExternal/high voltage power terminal - traditional PV 6-12v\n  Pull DRV off 4070 to pin for high current charging?\nJumpers for... what needs jumpers? Something must. \n  Charge full indicator? Tx/Rx LEDs? USB vdd?\nMove PV connector pins.\nReexamine supply of LEDs - vccio or usbvdd? Change Rs if necessary change on vccio/usbvdd\nTest points?
+Connection ~ 3150 4850
+$Comp
+L ZENER D6
+U 1 1 5254E5F2
+P 3000 6050
+F 0 "D6" H 3000 6150 50  0000 C CNN
+F 1 "ZENER" H 3000 5950 40  0000 C CNN
+F 2 "" H 3000 6050 60  0000 C CNN
+F 3 "" H 3000 6050 60  0000 C CNN
+	1    3000 6050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3000 7050 3000 6250
+Connection ~ 2000 7050
+Wire Wire Line
+	3000 5850 3000 4550
+Connection ~ 3000 4550
 $EndSCHEMATC
