@@ -418,8 +418,6 @@ F 3 "" H 9200 3800 60  0000 C CNN
 	1    9200 3800
 	1    0    0    -1  
 $EndComp
-Text Notes 4650 2450 0    79   ~ 0
-Is this the best way to integrate \nUSB PWR and LTC3105 VOut??
 Text Notes 7050 2100 0    60   ~ 0
 ADJ -> Vcc \n= 4.2v Vout.\nADJ  -> NC\n=4.1v Vout.
 $Comp
@@ -861,7 +859,7 @@ NoConn ~ 5150 5750
 NoConn ~ 5150 5550
 NoConn ~ 5150 5450
 Text Notes 8650 700  0    60   ~ 0
-Still TODO for v0.2:\nChange 3105 to 3108 for lower current operation?\n3.3v regulator from power sources to xbee pin 1\nSignaling from 3105 that it is not supplying current\nExternal/high voltage power terminal - traditional PV 6-12v\n  Pull DRV off 4070 to pin for high current charging?\nJumpers for... what needs jumpers? Something must. \n  Charge full indicator? Tx/Rx LEDs? USB vdd?\nMove PV connector pins.\nReexamine supply of LEDs - vccio or usbvdd? Change Rs if necessary change on vccio/usbvdd\nTest points?
+Still TODO for v0.2:\nChange 3105 to 3108 for lower current operation?\nIs a DC/DC converter really necessary? Could just try to pick an appropriate PV cell.\n3.3v regulator from power sources to xbee pin 1\nSignaling from 3105 that it is not supplying current\nExternal/high voltage power terminal - traditional PV 6-12v\n  Pull DRV off 4070 to pin for high current charging?\nJumpers for... what needs jumpers? Something must. \n  Charge full indicator? Tx/Rx LEDs? USB vdd?\nMove PV connector pins.\nReexamine supply of LEDs - vccio or usbvdd? Change Rs if necessary change on vccio/usbvdd\nTest points?
 Connection ~ 3150 4850
 $Comp
 L ZENER D6
@@ -880,4 +878,6 @@ Connection ~ 2000 7050
 Wire Wire Line
 	3000 5850 3000 4550
 Connection ~ 3000 4550
+Text Notes 4650 2450 0    79   ~ 0
+Is this the best way to integrate \nUSB PWR and LTC3105 VOut??
 $EndSCHEMATC
