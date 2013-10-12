@@ -116,10 +116,10 @@ $EndComp
 Text GLabel 2150 4450 1    60   Input ~ 0
 USB_VDD
 $Comp
-L GND #PWR4
+L GND #PWR01
 U 1 1 522EC0A5
 P 4250 7600
-F 0 "#PWR4" H 4250 7600 30  0001 C CNN
+F 0 "#PWR01" H 4250 7600 30  0001 C CNN
 F 1 "GND" H 4250 7530 30  0001 C CNN
 F 2 "" H 4250 7600 60  0000 C CNN
 F 3 "" H 4250 7600 60  0000 C CNN
@@ -127,10 +127,10 @@ F 3 "" H 4250 7600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR2
+L GND #PWR02
 U 1 1 522ECD60
 P 2350 5450
-F 0 "#PWR2" H 2350 5450 30  0001 C CNN
+F 0 "#PWR02" H 2350 5450 30  0001 C CNN
 F 1 "GND" H 2350 5380 30  0001 C CNN
 F 2 "" H 2350 5450 60  0000 C CNN
 F 3 "" H 2350 5450 60  0000 C CNN
@@ -171,7 +171,7 @@ F 3 "" H 2150 5100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 6550 5700 2    49   Input ~ 0
-VCCIO
+USB_VDD
 $Comp
 L FT231X-SSOP U4
 U 1 1 522FDA2E
@@ -232,10 +232,10 @@ F 3 "" H 6300 6050 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR1
+L GND #PWR03
 U 1 1 522FF942
 P 1450 7400
-F 0 "#PWR1" H 1450 7400 30  0001 C CNN
+F 0 "#PWR03" H 1450 7400 30  0001 C CNN
 F 1 "GND" H 1450 7330 30  0001 C CNN
 F 2 "" H 1450 7400 60  0000 C CNN
 F 3 "" H 1450 7400 60  0000 C CNN
@@ -267,17 +267,6 @@ $EndComp
 Text Notes 4600 6950 0    49   ~ 0
 MTTF Max Power should be set to allow for up to 200mA on the USB bus.\nMaybe even up to 500mA??\n\nNo. Default 90mA for now.
 $Comp
-L LTC3105-MSOP12 U3
-U 1 1 52312078
-P 2800 3050
-F 0 "U3" H 3050 2600 60  0000 C CNN
-F 1 "LTC3105-MSOP12" H 2800 3500 60  0000 C CNN
-F 2 "" H 2800 3050 60  0000 C CNN
-F 3 "" H 2800 3050 60  0000 C CNN
-	1    2800 3050
-	1    0    0    -1  
-$EndComp
-$Comp
 L LTC4070 U5
 U 1 1 52312087
 P 7900 2800
@@ -291,134 +280,53 @@ $EndComp
 $Comp
 L CONN_2 P2
 U 1 1 523120A0
-P 1100 3150
-F 0 "P2" V 1050 3150 40  0000 C CNN
-F 1 "PVCell" V 1150 3150 40  0000 C CNN
-F 2 "" H 1100 3150 60  0000 C CNN
-F 3 "" H 1100 3150 60  0000 C CNN
-	1    1100 3150
+P 1850 2650
+F 0 "P2" V 1800 2650 40  0000 C CNN
+F 1 "PVCell" V 1900 2650 40  0000 C CNN
+F 2 "" H 1850 2650 60  0000 C CNN
+F 3 "" H 1850 2650 60  0000 C CNN
+	1    1850 2650
 	-1   0    0    1   
-$EndComp
-$Comp
-L GND #PWR3
-U 1 1 52312207
-P 2800 3950
-F 0 "#PWR3" H 2800 3950 30  0001 C CNN
-F 1 "GND" H 2800 3880 30  0001 C CNN
-F 2 "" H 2800 3950 60  0000 C CNN
-F 3 "" H 2800 3950 60  0000 C CNN
-	1    2800 3950
-	1    0    0    -1  
 $EndComp
 $Comp
 L C C1
 U 1 1 52312498
-P 1650 3050
-F 0 "C1" H 1650 3150 40  0000 L CNN
-F 1 "10uF" H 1656 2965 40  0000 L CNN
-F 2 "" H 1688 2900 30  0000 C CNN
-F 3 "" H 1650 3050 60  0000 C CNN
-	1    1650 3050
+P 2500 2650
+F 0 "C1" H 2500 2750 40  0000 L CNN
+F 1 "10uF" H 2506 2565 40  0000 L CNN
+F 2 "" H 2538 2500 30  0000 C CNN
+F 3 "" H 2500 2650 60  0000 C CNN
+	1    2500 2650
 	1    0    0    -1  
 $EndComp
-NoConn ~ 2100 3250
-$Comp
-L C C2
-U 1 1 523127FB
-P 2000 3600
-F 0 "C2" H 2000 3700 40  0000 L CNN
-F 1 "1uF" H 2006 3515 40  0000 L CNN
-F 2 "" H 2038 3450 30  0000 C CNN
-F 3 "" H 2000 3600 60  0000 C CNN
-	1    2000 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L INDUCTOR L1
-U 1 1 52312912
-P 2800 2400
-F 0 "L1" V 2750 2400 40  0000 C CNN
-F 1 "10uH" V 2900 2400 40  0000 C CNN
-F 2 "" H 2800 2400 60  0000 C CNN
-F 3 "" H 2800 2400 60  0000 C CNN
-	1    2800 2400
-	0    -1   -1   0   
-$EndComp
-Text Notes 2750 4100 0    49   ~ 0
-VOut = 1.004v(R4/R5+1) = LTC4070Vcc + diode drop on D4.\nShould be in MOhm range.\n1.004*(3.3+1) = 4.3172V\nLDO = 1.004v(Vdiv between LDO/FBLDO+1) - Not used.\n
 NoConn ~ 7250 2800
-$Comp
-L R R4
-U 1 1 523131C1
-P 4000 2850
-F 0 "R4" V 4080 2850 40  0000 C CNN
-F 1 "3.3M" V 4007 2851 40  0000 C CNN
-F 2 "" V 3930 2850 30  0000 C CNN
-F 3 "" H 4000 2850 30  0000 C CNN
-	1    4000 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R5
-U 1 1 523131D0
-P 4250 2850
-F 0 "R5" V 4330 2850 40  0000 C CNN
-F 1 "1M" V 4257 2851 40  0000 C CNN
-F 2 "" V 4180 2850 30  0000 C CNN
-F 3 "" H 4250 2850 30  0000 C CNN
-	1    4250 2850
-	1    0    0    -1  
-$EndComp
-NoConn ~ 3500 3150
-$Comp
-L C C8
-U 1 1 5231354E
-P 4550 2850
-F 0 "C8" H 4550 2950 40  0000 L CNN
-F 1 "10uF" H 4556 2765 40  0000 L CNN
-F 2 "" H 4588 2700 30  0000 C CNN
-F 3 "" H 4550 2850 60  0000 C CNN
-	1    4550 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C6
-U 1 1 523138F1
-P 3750 3500
-F 0 "C6" H 3750 3600 40  0000 L CNN
-F 1 "4.7uF" H 3756 3415 40  0000 L CNN
-F 2 "" H 3788 3350 30  0000 C CNN
-F 3 "" H 3750 3500 60  0000 C CNN
-	1    3750 3500
-	1    0    0    -1  
-$EndComp
 $Comp
 L R R6
 U 1 1 52314992
-P 5500 1850
-F 0 "R6" V 5580 1850 40  0000 C CNN
-F 1 "33R" V 5507 1851 40  0000 C CNN
-F 2 "" V 5430 1850 30  0000 C CNN
-F 3 "" H 5500 1850 30  0000 C CNN
-	1    5500 1850
+P 4250 1850
+F 0 "R6" V 4330 1850 40  0000 C CNN
+F 1 "22R" V 4257 1851 40  0000 C CNN
+F 2 "" V 4180 1850 30  0000 C CNN
+F 3 "" H 4250 1850 30  0000 C CNN
+	1    4250 1850
 	0    -1   -1   0   
 $EndComp
-Text GLabel 4550 1850 0    60   Input ~ 0
+Text GLabel 3300 1850 0    60   Input ~ 0
 USB_VDD
 Text Notes 1550 7250 0    60   ~ 0
 Zener reverse current between USB-VDD and GND? \nProbably should...
 $Comp
-L GND #PWR6
+L GND #PWR04
 U 1 1 52315DFC
 P 9200 3800
-F 0 "#PWR6" H 9200 3800 30  0001 C CNN
+F 0 "#PWR04" H 9200 3800 30  0001 C CNN
 F 1 "GND" H 9200 3730 30  0001 C CNN
 F 2 "" H 9200 3800 60  0000 C CNN
 F 3 "" H 9200 3800 60  0000 C CNN
 	1    9200 3800
 	1    0    0    -1  
 $EndComp
-Text Notes 7050 2100 0    60   ~ 0
+Text Notes 6800 1700 0    60   ~ 0
 ADJ -> Vcc \n= 4.2v Vout.\nADJ  -> NC\n=4.1v Vout.
 $Comp
 L LED D5
@@ -444,10 +352,8 @@ F 3 "" H 9900 2400 30  0000 C CNN
 $EndComp
 Text Notes 9400 3100 0    60   ~ 0
 Optional Charge \nFull Indicator...\nOtherwise NC HBO\n...Active High!
-Text Notes 4000 1100 0    60   ~ 0
-R6 to be chosen to \nlimit shunt current to 50mA.\n(4.8v-3.2v)/33=48mA max charge current.\n(4.8v-3.2v)^2/33=77.5mW PwrDiss\n(4.8v-4.1v)/33=21.2mA max shunt current.\nNeed to double check these numbers.
-Text Notes 3950 3300 0    60   ~ 0
-PGood or LDO can be used to signal uController \nthat PVCell is not charging... not used currently.\nOpen drain so use a pull-up.\nSuggest PB4/Pin7 as PCINT or just I/O on MT.
+Text Notes 2750 1100 0    60   ~ 0
+R6 chosen to limit shunt current to 50mA.\n(4.3v-3.2v)/22=50mA max charge current.\n(4.3v-3.2v)^2/33=55mW PwrDiss\n(4.3v-4.1v)/33=3.03mA max shunt current.\n
 $Comp
 L CONN_10 H1
 U 1 1 5232A47B
@@ -509,34 +415,11 @@ Text Notes 6200 5450 0    60   ~ 0
 Conn_10s are for the smd headers in case I don't get around to\nincorporating them in a 20 pin xbee ff footprint.
 Text Notes 6900 1250 0    60   ~ 0
 PMOS1 does Low Battery cutoff.
-Text GLabel 7250 1350 0    60   Input ~ 0
+Text GLabel 5950 1350 0    60   Input ~ 0
 BAT+
-$Comp
-L DIODESCH D4
-U 1 1 52353052
-P 4950 2150
-F 0 "D4" H 4950 2250 40  0000 C CNN
-F 1 "DIODESCH" H 4950 2050 40  0000 C CNN
-F 2 "" H 4950 2150 60  0000 C CNN
-F 3 "" H 4950 2150 60  0000 C CNN
-	1    4950 2150
-	1    0    0    -1  
-$EndComp
-Text Notes 4800 2750 0    60   ~ 0
-D3/D4 Fw Drop <.2V
-NoConn ~ 7250 2600
+Text Notes 2850 2600 0    60   ~ 0
+D3/D4 Fw Drop Approx. 0.7V\nAssume 5V for PC
 NoConn ~ 8550 3000
-$Comp
-L DIODESCH D3
-U 1 1 52355820
-P 4950 1850
-F 0 "D3" H 4950 1950 40  0000 C CNN
-F 1 "DIODESCH" H 4950 1750 40  0000 C CNN
-F 2 "" H 4950 1850 60  0000 C CNN
-F 3 "" H 4950 1850 60  0000 C CNN
-	1    4950 1850
-	1    0    0    -1  
-$EndComp
 $Comp
 L MOS_P-INFINEON-BSS83P Q1
 U 1 1 52355F92
@@ -665,135 +548,46 @@ Connection ~ 1700 5650
 Connection ~ 2000 5550
 Connection ~ 1450 7050
 Wire Wire Line
-	2800 3750 2800 3950
-Wire Wire Line
-	2750 3750 2850 3750
-Connection ~ 2800 3750
-Wire Wire Line
-	1450 3250 1450 3850
-Wire Wire Line
-	1450 3850 4550 3850
-Connection ~ 2800 3850
-Wire Wire Line
-	1450 3050 1450 2750
-Wire Wire Line
-	1450 2750 2100 2750
-Wire Wire Line
-	1650 2750 1650 2850
-Connection ~ 1650 2750
-Wire Wire Line
-	1650 3250 1650 3850
-Connection ~ 1650 3850
-Wire Wire Line
-	2100 3150 1800 3150
-Wire Wire Line
-	1800 3150 1800 3850
-Connection ~ 1800 3850
-Wire Wire Line
-	2100 3350 2000 3350
-Wire Wire Line
-	2000 3350 2000 3400
-Wire Wire Line
-	2000 3800 2000 3850
-Connection ~ 2000 3850
-Wire Wire Line
-	3100 2400 3600 2400
-Wire Wire Line
-	3600 2400 3600 2750
-Wire Wire Line
-	3600 2750 3500 2750
-Wire Wire Line
-	2500 2400 2000 2400
-Wire Wire Line
-	2000 2400 2000 2750
-Connection ~ 2000 2750
-Wire Wire Line
-	3500 3350 3500 3850
-Wire Wire Line
 	7250 3000 7000 3000
 Wire Wire Line
 	7000 3000 7000 2000
 Wire Wire Line
 	7900 1350 7900 2100
-Wire Wire Line
-	3500 2850 3700 2850
-Wire Wire Line
-	3700 2850 3700 2600
-Wire Wire Line
-	3700 2600 4000 2600
-Wire Wire Line
-	3700 3100 4150 3100
-Wire Wire Line
-	3700 3100 3700 3050
-Wire Wire Line
-	3700 3050 3500 3050
-Wire Wire Line
-	4150 3100 4150 2600
-Wire Wire Line
-	4150 2600 4250 2600
-Connection ~ 4000 3100
-Wire Wire Line
-	4250 3100 4450 3100
-Wire Wire Line
-	4450 3100 4450 3850
-Connection ~ 4250 3850
-Wire Wire Line
-	4550 3850 4550 3050
-Connection ~ 4450 3850
-Wire Wire Line
-	4000 2600 4000 2400
-Wire Wire Line
-	4000 2400 4550 2400
-Wire Wire Line
-	3750 3300 3750 3250
-Connection ~ 3750 3250
-Wire Wire Line
-	3750 3700 3750 3850
-Connection ~ 3750 3850
-Connection ~ 3500 3850
-Connection ~ 3500 3750
-Wire Wire Line
-	3750 3250 3500 3250
 Connection ~ 7000 2000
-Connection ~ 4550 2400
 Wire Wire Line
 	7900 3600 7900 3500
 Wire Wire Line
 	7800 3500 8000 3500
 Connection ~ 7900 3500
 Wire Wire Line
-	5800 2000 10350 2000
+	4550 2000 10350 2000
 Wire Wire Line
 	10350 2100 10300 2100
 Wire Wire Line
 	10300 2100 10300 3600
 Wire Wire Line
-	10300 3600 7900 3600
+	10300 3600 6500 3600
 Connection ~ 7900 2000
 Connection ~ 9200 3600
 Wire Wire Line
-	4750 2150 4550 2150
+	2500 2150 3500 2150
 Wire Wire Line
-	4550 2150 4550 2650
+	3300 1850 3500 1850
 Wire Wire Line
-	4550 1850 4750 1850
+	3900 1850 4000 1850
 Wire Wire Line
-	5150 1850 5250 1850
+	4500 1850 4550 1850
 Wire Wire Line
-	5150 2150 5800 2150
-Wire Wire Line
-	5750 1850 5800 1850
-Wire Wire Line
-	5800 1850 5800 2150
-Connection ~ 5800 2000
+	4550 1850 4550 2150
+Connection ~ 4550 2000
 Wire Notes Line
-	4050 1750 6000 1750
+	2800 1750 4750 1750
 Wire Notes Line
-	6000 1750 6000 2350
+	4750 1750 4750 2350
 Wire Notes Line
-	6000 2350 4050 2350
+	4750 2350 2800 2350
 Wire Notes Line
-	4050 2350 4050 1750
+	2800 2350 2800 1750
 Wire Wire Line
 	9900 2650 9900 2750
 Wire Wire Line
@@ -835,14 +629,14 @@ Connection ~ 10300 2150
 Wire Wire Line
 	7600 1900 7600 1650
 Wire Wire Line
-	7250 1350 7400 1350
+	6900 1350 7400 1350
 Wire Wire Line
 	7800 1350 7900 1350
 $Comp
-L GND #PWR5
+L GND #PWR05
 U 1 1 5235B126
 P 5950 5350
-F 0 "#PWR5" H 5950 5350 30  0001 C CNN
+F 0 "#PWR05" H 5950 5350 30  0001 C CNN
 F 1 "GND" H 5950 5280 30  0001 C CNN
 F 2 "" H 5950 5350 60  0000 C CNN
 F 3 "" H 5950 5350 60  0000 C CNN
@@ -858,8 +652,8 @@ NoConn ~ 5150 5850
 NoConn ~ 5150 5750
 NoConn ~ 5150 5550
 NoConn ~ 5150 5450
-Text Notes 8650 700  0    60   ~ 0
-Still TODO for v0.2:\nChange 3105 to 3108 for lower current operation?\nIs a DC/DC converter really necessary? Could just try to pick an appropriate PV cell.\n3.3v regulator from power sources to xbee pin 1\nSignaling from 3105 that it is not supplying current\nExternal/high voltage power terminal - traditional PV 6-12v\n  Pull DRV off 4070 to pin for high current charging?\nJumpers for... what needs jumpers? Something must. \n  Charge full indicator? Tx/Rx LEDs? USB vdd?\nMove PV connector pins.\nReexamine supply of LEDs - vccio or usbvdd? Change Rs if necessary change on vccio/usbvdd\nTest points?
+Text Notes 650  3300 0    60   ~ 0
+Still TODO for v0.2:\nJumpers for... what needs jumpers? Something must. \n  Charge full indicator? Tx/Rx LEDs? USB vdd?\nTest points?
 Connection ~ 3150 4850
 $Comp
 L ZENER D6
@@ -878,6 +672,95 @@ Connection ~ 2000 7050
 Wire Wire Line
 	3000 5850 3000 4550
 Connection ~ 3000 4550
-Text Notes 4650 2450 0    79   ~ 0
-Is this the best way to integrate \nUSB PWR and LTC3105 VOut??
+Wire Wire Line
+	7250 2600 7250 2000
+Connection ~ 7250 2000
+$Comp
+L AP7313-3.3VREGULATOR U2
+U 1 1 52564B55
+P 6500 1400
+F 0 "U2" H 6700 1200 40  0000 C CNN
+F 1 "AP7313-3.3VREGULATOR" H 6200 1600 40  0000 L CNN
+F 2 "" H 6500 1500 30  0000 C CIN
+F 3 "" H 6500 1400 60  0000 C CNN
+	1    6500 1400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 1350 5950 1350
+Wire Wire Line
+	6500 3600 6500 1650
+Connection ~ 7900 3600
+Wire Wire Line
+	2500 2150 2500 2450
+Wire Wire Line
+	2200 2550 2200 2300
+Wire Wire Line
+	2200 2300 2500 2300
+Connection ~ 2500 2300
+Wire Wire Line
+	2200 2750 2200 3050
+Wire Wire Line
+	2200 3050 6500 3050
+Wire Wire Line
+	2500 3050 2500 2850
+Connection ~ 6500 3050
+Connection ~ 2500 3050
+$Comp
+L R R3
+U 1 1 525651B6
+P 4250 2150
+F 0 "R3" V 4330 2150 40  0000 C CNN
+F 1 "22R" V 4257 2151 40  0000 C CNN
+F 2 "" V 4180 2150 30  0000 C CNN
+F 3 "" H 4250 2150 30  0000 C CNN
+	1    4250 2150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 2150 3900 2150
+Wire Wire Line
+	4550 2150 4500 2150
+$Comp
+L DIODE-NC D3
+U 1 1 52565A5F
+P 3700 1850
+F 0 "D3" H 3700 1950 40  0000 C CNN
+F 1 "DIODE-NC" H 3500 1750 40  0000 C CNN
+F 2 "" H 3700 1850 60  0000 C CNN
+F 3 "" H 3700 1850 60  0000 C CNN
+	1    3700 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIODE-NC D4
+U 1 1 52565A6E
+P 3700 2150
+F 0 "D4" H 3700 2250 40  0000 C CNN
+F 1 "DIODE-NC" H 3500 2050 40  0000 C CNN
+F 2 "" H 3700 2150 60  0000 C CNN
+F 3 "" H 3700 2150 60  0000 C CNN
+	1    3700 2150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3700 2000
+NoConn ~ 3700 2300
+$Comp
+L DIODE-NC D7
+U 1 1 5258D632
+P 6750 2700
+F 0 "D7" H 6750 2800 40  0000 C CNN
+F 1 "DIODE-NC" H 6550 2600 40  0000 C CNN
+F 2 "" H 6750 2700 60  0000 C CNN
+F 3 "" H 6750 2700 60  0000 C CNN
+	1    6750 2700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6750 2500 6750 2000
+Connection ~ 6750 2000
+Wire Wire Line
+	6750 2900 6750 3600
+Connection ~ 6750 3600
+NoConn ~ 6900 2700
 $EndSCHEMATC

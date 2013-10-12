@@ -1,4 +1,4 @@
-update=Sat 05 Oct 2013 19:08:18 EST
+update=Fri 11 Oct 2013 08:36:54 EST
 version=1
 last_client=pcbnew
 [general]
@@ -52,12 +52,12 @@ NetIExt=net
 EquName1=devcms
 [pcbnew]
 version=1
-LastNetListRead=
+LastNetListRead=MeshUSB.net
 UseCmpFile=1
 PadDrill="    0.000000"
 PadDrillOvalY="    0.000000"
-PadSizeH="    1.500000"
-PadSizeV="    2.000000"
+PadSizeH="    2.290000"
+PadSizeV="    0.890000"
 PcbTextSizeV="    1.500000"
 PcbTextSizeH="    1.500000"
 PcbTextThickness="    0.300000"
