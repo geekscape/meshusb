@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-mar-13)-testing date = Sat 12 Oct 2013 15:56:14 EST
+Cmp-Mod V01 Created by PcbNew date = Sat 12 Oct 2013 18:27:32 EST
 
 BeginCmp
 TimeStamp = /52312498;
@@ -193,7 +193,7 @@ BeginCmp
 TimeStamp = /522FDA2E;
 Reference = U4;
 ValeurCmp = FT231X-SSOP;
-IdModule  = _MUSB_SSOP20;
+IdModule  = _MUSB_SSOP20-FT231X;
 EndCmp
 
 BeginCmp

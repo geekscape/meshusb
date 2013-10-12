@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  Sat 12 Oct 2013 16:31:39 EST
+PCBNEW-LibModule-V1  Sat 12 Oct 2013 18:35:43 EST
 # encoding utf-8
 Units mm
 $INDEX
@@ -14,6 +14,7 @@ _MUSB_SM0603_Capa
 _MUSB_SM0603_Resistor
 _MUSB_SMAZ5V6-Zener-DO214
 _MUSB_SSOP20
+_MUSB_SSOP20-FT231X
 _MUSB_USB-A-PCB
 _MUSB_XBee_Board_BackLablesOnly
 _MUSB_XBee_Board_NO_PADS
@@ -954,6 +955,193 @@ Of 0 0 0
 Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE _MUSB_SSOP20
+$MODULE _MUSB_SSOP20-FT231X
+Po 0 0 0 15 5258FBCC 00000000 ~~
+Li _MUSB_SSOP20-FT231X
+Cd SSOP 20 pins
+Kw CMS SSOP SMD
+Sc 0
+AR 
+Op 0 0 0
+At SMD
+T0 0 -0.635 0.762 0.762 0 0.127 N V 21 N "SSOP20"
+T1 0 0.635 0.762 0.762 0 0.127 N V 21 N "Val**"
+DS 4.35 -1.8 -4.35 -1.8 0.15 21
+DS -4.35 -1.8 -4.35 1.8 0.15 21
+DS -4.35 1.8 4.35 1.8 0.15 21
+DS 4.35 1.78 4.35 -1.79 0.15 21
+DS -3.81 1.778 -3.81 -1.778 0.1524 21
+DC -3.302 1.27 -3.556 1.016 0.127 21
+DS -3.81 -0.635 -3.048 -0.635 0.127 21
+DS -3.048 -0.635 -3.048 0.635 0.127 21
+DS -3.048 0.635 -3.81 0.635 0.127 21
+$PAD
+Sh "1" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.8575 2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "2" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.2225 2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "3" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.5875 2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "4" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.9525 2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "5" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.3175 2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "6" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.3175 2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "7" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.9525 2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "8" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.5875 2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "9" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.2225 2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "10" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.8575 2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "11" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.8575 -2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "12" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.2225 -2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "13" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.5875 -2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "14" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.9525 -2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "15" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.3175 -2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "16" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.3175 -2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "17" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.9525 -2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "18" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.5875 -2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "19" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.2225 -2.667
+.LocalClearance 0.2032
+$EndPAD
+$PAD
+Sh "20" R 0.4064 1.27 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.8575 -2.667
+.LocalClearance 0.2032
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so20.wrl"
+Sc 0.255 0.33 0.3
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE _MUSB_SSOP20-FT231X
 $MODULE _MUSB_USB-A-PCB
 Po 0 0 0 15 52359FA8 00000000 ~~
 Li _MUSB_USB-A-PCB
