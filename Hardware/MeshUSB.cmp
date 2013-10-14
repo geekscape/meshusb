@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by PcbNew date = Sat 12 Oct 2013 18:27:32 EST
+Cmp-Mod V01 Created by CvPcb (2013-mar-13)-testing date = Mon 14 Oct 2013 23:21:57 EST
 
 BeginCmp
 TimeStamp = /52312498;
@@ -99,6 +99,27 @@ IdModule  = _MUSB-FEMALE-HEADER-NPPN101BFLC-RC-Pin1Left;
 EndCmp
 
 BeginCmp
+TimeStamp = /525BDBD8;
+Reference = JP1;
+ValeurCmp = JUMPER;
+IdModule  = _MUSB_SMTJumper;
+EndCmp
+
+BeginCmp
+TimeStamp = /525BDD98;
+Reference = JP2;
+ValeurCmp = JUMPER;
+IdModule  = _MUSB_SMTJumper;
+EndCmp
+
+BeginCmp
+TimeStamp = /525BE6B9;
+Reference = JP3;
+ValeurCmp = JUMPER;
+IdModule  = _MUSB_SMTJumper;
+EndCmp
+
+BeginCmp
 TimeStamp = /522EB9C4;
 Reference = Li-Battery1;
 ValeurCmp = BAT2;
@@ -144,6 +165,20 @@ BeginCmp
 TimeStamp = /525651B6;
 Reference = R3;
 ValeurCmp = 22R;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /525BDECB;
+Reference = R4;
+ValeurCmp = 22k;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /525BDF6F;
+Reference = R5;
+ValeurCmp = 22k;
 IdModule  = _MUSB_SM0603_Resistor;
 EndCmp
 
