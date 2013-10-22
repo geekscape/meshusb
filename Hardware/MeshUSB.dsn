@@ -21,19 +21,25 @@
       )
     )
     (boundary
-      (path pcb 0  163800 -97750  133400 -97750  133400 -125850  141910 -125850
-            142810 -126750  142810 -138540  154200 -138540  154200 -126750
-            155100 -125850  163800 -125850  163800 -97750)
+      (path pcb 0  163600 -97750  133400 -97750  133400 -129350  141910 -129350
+            142810 -130250  142810 -142040  154200 -142040  154200 -130250
+            155100 -129350  163600 -129350  163600 -97750)
     )
     (via "Via[0-1]_889:635_um" "Via[0-1]_889:0_um")
     (rule
-      (width 254)
-      (clearance 254.1)
-      (clearance 254.1 (type default_smd))
-      (clearance 63.5 (type smd_smd))
+      (width 203.2)
+      (clearance 203.3)
+      (clearance 203.3 (type default_smd))
+      (clearance 50.8 (type smd_smd))
     )
   )
   (placement
+    (component "_MUSB_USB-A-PCB"
+      (place P1 148501 -135690 front 180 (PN USB_4))
+    )
+    (component _MUSB_XBee_Board_OUTLINE_ONLY
+      (place U1 148501 -105004 front 0 (PN XBEE))
+    )
     (component PIN_ARRAY_2X1
       (place P2 148500 -99140 front 180 (PN PVCell))
     )
@@ -59,32 +65,25 @@
       (place VR2 153840 -116570 front 0 (PN VR0603))
       (place R10 145340 -101770 front 270 (PN 270))
       (place R3 143160 -116570 front 180 (PN 22R))
+      (place R4 146070 -109090 front 90 (PN 22k))
+      (place R5 150930 -109090 front 270 (PN 22k))
     )
     (component SOT23
-      (place Q1 153840 -106150 front 180 (PN MOS_P))
-      (place U2 143160 -106150 front 180 (PN "AP7313-3.3VREGULATOR"))
-      (place D3 153840 -112320 front 0 (PN "DIODE-NC"))
-      (place D4 143160 -112320 front 0 (PN "DIODE-NC"))
-      (place D7 148500 -109235 front 180 (PN "DIODE-NC"))
+      (place Q1 154010 -107004 front 90 (PN MOS_P))
+      (place U2 148500 -110880 front 180 (PN "AP7313-3.3VREGULATOR"))
+      (place D3 153840 -112420 front 0 (PN "DIODE-NC"))
+      (place D4 142990 -107004 front 270 (PN "DIODE-NC"))
+      (place D7 143160 -112420 front 0 (PN "DIODE-NC"))
     )
     (component "_MUSB_MPD-BK-5033_2450BatteryHolder"
       (place "Li-Battery1" 148500 -115004 back 0 (PN BAT2))
     )
-    (component "_MUSB_USB-A-PCB"
-      (place P1 148501 -132190 front 180 (PN USB_4))
-    )
     (component LOGO
-      (place G0 136050 -100370 front 0 (PN LOGO))
-      (place G1 147520 -93600 front 0 (PN LOGO))
-    )
-    (component _MUSB_XBee_Board_OUTLINE_ONLY
-      (place U1 148501 -105004 front 0 (PN XBEE))
-    )
-    (component _MUSB_SSOP20
-      (place U4 148500 -120830 front 270 (PN "FT231X-SSOP"))
+      (place G0 139980 -100480 front 0 (PN LOGO))
+      (place G1 148500 -128140 front 0 (PN LOGO))
     )
     (component "_MUSB_SMAZ5V6-Zener-DO214"
-      (place D6 148500 -112960 front 270 (PN ZENER))
+      (place D6 148500 -114130 front 270 (PN ZENER))
     )
     (component "_MUSB-FEMALE-HEADER-NPPN101BFLD-RC-Pin1Right"
       (place H1 137500 -114004 front 180 (PN XBeeLeftPins))
@@ -97,8 +96,38 @@
       (place D1 154480 -101770 front 270 (PN RX_LED))
       (place D5 143860 -101770 front 270 (PN LED))
     )
+    (component "_MUSB_SSOP20-FT231X"
+      (place U4 148500 -120830 front 270 (PN "FT231X-SSOP"))
+    )
+    (component _MUSB_SMTJumper
+      (place JP1 162042 -107020 front 90 (PN JUMPER))
+      (place JP3 162042 -111030 front 90 (PN JUMPER))
+      (place JP2 148500 -108320 front 180 (PN JUMPER))
+    )
+    (component "_MUSB_3mmTH-1pin"
+      (place 1PIN4 161220 -126860 front 0 (PN P***))
+    )
+    (component "_MUSB_3mmTH-1pin::1"
+      (place 1PIN3 136000 -126860 front 0 (PN P***))
+      (place 1PIN1 136000 -100860 front 0 (PN P***))
+      (place 1PIN2 161000 -100860 front 0 (PN P***))
+    )
   )
   (library
+    (image "_MUSB_USB-A-PCB"
+      (pin Rect[T]Pad_1600x7410_um 1 3500 1405)
+      (pin Rect[T]Pad_1600x7410_um 4 -3500 1405)
+      (pin Rect[T]Pad_1000x6410_um 2 1000 905)
+      (pin Rect[T]Pad_1000x6410_um 3 -1000 905)
+    )
+    (image _MUSB_XBee_Board_OUTLINE_ONLY
+      (outline (path signal 381  -12446 0  -12446 254))
+      (outline (path signal 150  6840 5100  10820 1640))
+      (outline (path signal 381  -12446 -19558  -12446 -20574))
+      (outline (path signal 381  12446 -19558  12446 -20574))
+      (outline (path signal 381  12446 0  12446 254))
+      (outline (path signal 381  -12446 -20574  12446 -20574))
+    )
     (image PIN_ARRAY_2X1
       (outline (path signal 152.4  -2540 -1270  -2540 1270))
       (outline (path signal 152.4  -2540 1270  2540 1270))
@@ -187,61 +216,7 @@
       (pin Round[A]Pad_2540_um 1 12950 0)
       (pin Round[A]Pad_2540_um 1@1 -12950 0)
     )
-    (image "_MUSB_USB-A-PCB"
-      (outline (path signal 150  -5690 6350  -5690 -6350))
-      (outline (path signal 150  -5690 -6350  5690 -6350))
-      (outline (path signal 150  5690 -6350  5690 6350))
-      (outline (path signal 150  5690 6350  -5690 6350))
-      (pin Rect[T]Pad_1600x7410_um 1 3500 1405)
-      (pin Rect[T]Pad_1600x7410_um 4 -3500 1405)
-      (pin Rect[T]Pad_1000x6410_um 2 1000 905)
-      (pin Rect[T]Pad_1000x6410_um 3 -1000 905)
-    )
     (image LOGO
-    )
-    (image _MUSB_XBee_Board_OUTLINE_ONLY
-      (outline (path signal 381  -12446 0  -12446 254))
-      (outline (path signal 150  -6830 5100  -11000 1500))
-      (outline (path signal 150  6840 5100  10820 1640))
-      (outline (path signal 381  -12446 -19558  -12446 -20574))
-      (outline (path signal 381  12446 -19558  12446 -20574))
-      (outline (path signal 381  12446 0  12446 254))
-      (outline (path signal 381  -12446 -20574  12446 -20574))
-    )
-    (image _MUSB_SSOP20
-      (outline (path signal 150  4350 1800  -4350 1800))
-      (outline (path signal 150  -4350 1800  -4350 -1800))
-      (outline (path signal 150  -4350 -1800  4350 -1800))
-      (outline (path signal 150  4350 -1780  4350 1790))
-      (outline (path signal 152.4  -3810 -1778  -3810 1778))
-      (outline (path signal 127  -2942.79 -1270  -2960.37 -1381  -3011.39 -1481.14  -3090.86 -1560.61
-            -3191 -1611.63  -3302 -1629.21  -3413 -1611.63  -3513.14 -1560.61
-            -3592.61 -1481.14  -3643.63 -1381  -3661.21 -1270  -3643.63 -1159
-            -3592.61 -1058.86  -3513.14 -979.393  -3413 -928.371  -3302 -910.79
-            -3191 -928.371  -3090.86 -979.393  -3011.39 -1058.86  -2960.37 -1159))
-      (outline (path signal 127  -3810 635  -3048 635))
-      (outline (path signal 127  -3048 635  -3048 -635))
-      (outline (path signal 127  -3048 -635  -3810 -635))
-      (pin Rect[T]Pad_406.4x1270_um 1 -2921 -2667)
-      (pin Rect[T]Pad_406.4x1270_um 2 -2286 -2667)
-      (pin Rect[T]Pad_406.4x1270_um 3 -1625.6 -2667)
-      (pin Rect[T]Pad_406.4x1270_um 4 -965.2 -2667)
-      (pin Rect[T]Pad_406.4x1270_um 5 -330.2 -2667)
-      (pin Rect[T]Pad_406.4x1270_um 6 330.2 -2667)
-      (pin Rect[T]Pad_406.4x1270_um 7 990.6 -2667)
-      (pin Rect[T]Pad_406.4x1270_um 8 1625.6 -2667)
-      (pin Rect[T]Pad_406.4x1270_um 9 2286 -2667)
-      (pin Rect[T]Pad_406.4x1270_um 10 2921 -2667)
-      (pin Rect[T]Pad_406.4x1270_um 11 2921 2667)
-      (pin Rect[T]Pad_406.4x1270_um 12 2286 2667)
-      (pin Rect[T]Pad_406.4x1270_um 13 1625.6 2667)
-      (pin Rect[T]Pad_406.4x1270_um 14 990.6 2667)
-      (pin Rect[T]Pad_406.4x1270_um 15 330.2 2667)
-      (pin Rect[T]Pad_406.4x1270_um 16 -330.2 2667)
-      (pin Rect[T]Pad_406.4x1270_um 17 -965.2 2667)
-      (pin Rect[T]Pad_406.4x1270_um 18 -1625.6 2667)
-      (pin Rect[T]Pad_406.4x1270_um 19 -2286 2667)
-      (pin Rect[T]Pad_406.4x1270_um 20 -2921 2667)
     )
     (image "_MUSB_SMAZ5V6-Zener-DO214"
       (outline (path signal 150  1900 1750  930 1750))
@@ -312,6 +287,54 @@
       (pin Rect[T]Pad_800x800_um 1 -750 0)
       (pin Rect[T]Pad_800x800_um 2 750 0)
     )
+    (image "_MUSB_SSOP20-FT231X"
+      (outline (path signal 150  4350 1800  -4350 1800))
+      (outline (path signal 150  -4350 1800  -4350 -1800))
+      (outline (path signal 150  -4350 -1800  4350 -1800))
+      (outline (path signal 150  4350 -1780  4350 1790))
+      (outline (path signal 152.4  -3810 -1778  -3810 1778))
+      (outline (path signal 127  -2942.79 -1270  -2960.37 -1381  -3011.39 -1481.14  -3090.86 -1560.61
+            -3191 -1611.63  -3302 -1629.21  -3413 -1611.63  -3513.14 -1560.61
+            -3592.61 -1481.14  -3643.63 -1381  -3661.21 -1270  -3643.63 -1159
+            -3592.61 -1058.86  -3513.14 -979.393  -3413 -928.371  -3302 -910.79
+            -3191 -928.371  -3090.86 -979.393  -3011.39 -1058.86  -2960.37 -1159))
+      (outline (path signal 127  -3810 635  -3048 635))
+      (outline (path signal 127  -3048 635  -3048 -635))
+      (outline (path signal 127  -3048 -635  -3810 -635))
+      (pin Rect[T]Pad_406.4x1270_um 1 -2857.5 -2667)
+      (pin Rect[T]Pad_406.4x1270_um 2 -2222.5 -2667)
+      (pin Rect[T]Pad_406.4x1270_um 3 -1587.5 -2667)
+      (pin Rect[T]Pad_406.4x1270_um 4 -952.5 -2667)
+      (pin Rect[T]Pad_406.4x1270_um 5 -317.5 -2667)
+      (pin Rect[T]Pad_406.4x1270_um 6 317.5 -2667)
+      (pin Rect[T]Pad_406.4x1270_um 7 952.5 -2667)
+      (pin Rect[T]Pad_406.4x1270_um 8 1587.5 -2667)
+      (pin Rect[T]Pad_406.4x1270_um 9 2222.5 -2667)
+      (pin Rect[T]Pad_406.4x1270_um 10 2857.5 -2667)
+      (pin Rect[T]Pad_406.4x1270_um 11 2857.5 2667)
+      (pin Rect[T]Pad_406.4x1270_um 12 2222.5 2667)
+      (pin Rect[T]Pad_406.4x1270_um 13 1587.5 2667)
+      (pin Rect[T]Pad_406.4x1270_um 14 952.5 2667)
+      (pin Rect[T]Pad_406.4x1270_um 15 317.5 2667)
+      (pin Rect[T]Pad_406.4x1270_um 16 -317.5 2667)
+      (pin Rect[T]Pad_406.4x1270_um 17 -952.5 2667)
+      (pin Rect[T]Pad_406.4x1270_um 18 -1587.5 2667)
+      (pin Rect[T]Pad_406.4x1270_um 19 -2222.5 2667)
+      (pin Rect[T]Pad_406.4x1270_um 20 -2857.5 2667)
+    )
+    (image _MUSB_SMTJumper
+      (pin Rect[T]Pad_500x900_um 1 -650 0)
+      (pin Rect[T]Pad_500x900_um 2 650 0)
+      (pin Rect[T]Pad_1500x203.2_um 2@1 0 0)
+    )
+    (image "_MUSB_3mmTH-1pin"
+      (keepout "" (circle F.Cu 3000 -220 0))
+      (keepout "" (circle B.Cu 3000 -220 0))
+    )
+    (image "_MUSB_3mmTH-1pin::1"
+      (keepout "" (circle F.Cu 3000))
+      (keepout "" (circle B.Cu 3000))
+    )
     (padstack Round[A]Pad_1524_um
       (shape (circle F.Cu 1524))
       (shape (circle B.Cu 1524))
@@ -338,6 +361,10 @@
       (shape (rect F.Cu -209.55 -584.2 209.55 584.2))
       (attach off)
     )
+    (padstack Rect[T]Pad_500x900_um
+      (shape (rect F.Cu -250 -450 250 450))
+      (attach off)
+    )
     (padstack Rect[T]Pad_5000x5000_um
       (shape (rect F.Cu -2500 -2500 2500 2500))
       (attach off)
@@ -356,6 +383,10 @@
     )
     (padstack Rect[T]Pad_1000x6410_um
       (shape (rect F.Cu -500 -3205 500 3205))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_1500x203.2_um
+      (shape (rect F.Cu -750 -101.6 750 101.6))
       (attach off)
     )
     (padstack Rect[T]Pad_1500x3200_um
@@ -391,177 +422,189 @@
       (pins U2-2 H1-1)
     )
     (net GND
-      (pins P2-1 U5-5 U5-9 C1-2 C3-2 C4-2 VR1-2 VR2-2 R10-1 "Li-Battery1"-2 P1-1 U4-6
-        U4-16 U2-3 D6-1 H1-10 D7-3)
+      (pins P1-1 P2-1 U5-5 U5-9 C1-2 C3-2 C4-2 VR1-2 VR2-2 R10-1 "Li-Battery1"-2 U2-3
+        D6-1 H1-10 D7-3 U4-6 U4-16 R5-2)
     )
     (net "N-000001"
-      (pins U4-10 D2-2)
-    )
-    (net "N-0000010"
-      (pins R2-1 VR1-1 P1-2)
-    )
-    (net "N-0000011"
-      (pins R1-2 U4-12)
-    )
-    (net "N-0000012"
-      (pins R2-2 U4-11)
-    )
-    (net "N-0000013"
-      (pins F1-1 P1-4)
-    )
-    (net "N-0000017"
-      (pins Q1-3 U2-1)
-    )
-    (net "N-0000018"
-      (pins P2-2 C1-1 D4-3)
-    )
-    (net "N-0000019"
-      (pins U5-2 U5-3 U5-8 R6-2 Q1-2 "Li-Battery1"-1 "Li-Battery1"-1@1 R3-2 D7-1)
-    )
-    (net "N-000002"
-      (pins U4-20 H1-3)
-    )
-    (net "N-0000020"
-      (pins D7-2)
-    )
-    (net "N-0000021"
-      (pins D4-2)
-    )
-    (net "N-0000022"
-      (pins D3-2)
-    )
-    (net "N-0000023"
-      (pins R3-1 D4-1)
-    )
-    (net "N-0000024"
       (pins R6-1 D3-1)
     )
-    (net "N-0000025"
-      (pins U5-6 Q1-1)
+    (net "N-0000010"
+      (pins H1-3 U4-20)
     )
-    (net "N-0000026"
-      (pins U5-4 D5-1)
-    )
-    (net "N-0000027"
-      (pins R10-2 D5-2)
-    )
-    (net "N-0000028"
-      (pins U4-18)
-    )
-    (net "N-0000029"
-      (pins U4-2)
-    )
-    (net "N-000003"
-      (pins U4-4 H1-2)
-    )
-    (net "N-0000030"
-      (pins U4-9)
-    )
-    (net "N-0000031"
-      (pins U4-7)
-    )
-    (net "N-0000032"
-      (pins U4-8)
-    )
-    (net "N-0000033"
-      (pins U4-5)
-    )
-    (net "N-0000034"
-      (pins U4-19)
-    )
-    (net "N-0000035"
-      (pins U5-7)
-    )
-    (net "N-000004"
+    (net "N-0000011"
       (pins C9-2 U4-1)
     )
-    (net "N-000005"
-      (pins C9-1 H1-5)
+    (net "N-0000012"
+      (pins D2-2 U4-10)
     )
-    (net "N-0000056"
-      (pins U5-1)
+    (net "N-0000013"
+      (pins D1-2 U4-17)
     )
-    (net "N-0000057"
-      (pins H2-7)
-    )
-    (net "N-0000058"
-      (pins H2-10)
-    )
-    (net "N-0000059"
-      (pins H2-9)
-    )
-    (net "N-000006"
-      (pins U4-17 D1-2)
-    )
-    (net "N-0000060"
-      (pins H2-8)
-    )
-    (net "N-0000061"
-      (pins H2-6)
-    )
-    (net "N-0000062"
-      (pins H2-5)
-    )
-    (net "N-0000063"
-      (pins H2-4)
-    )
-    (net "N-0000064"
-      (pins H2-3)
-    )
-    (net "N-0000065"
-      (pins H2-2)
-    )
-    (net "N-0000066"
-      (pins H2-1)
-    )
-    (net "N-0000067"
-      (pins H1-9)
-    )
-    (net "N-0000068"
-      (pins H1-8)
-    )
-    (net "N-0000069"
-      (pins H1-7)
-    )
-    (net "N-000007"
+    (net "N-0000014"
       (pins R9-2 D2-1)
     )
-    (net "N-0000070"
-      (pins H1-6)
-    )
-    (net "N-0000071"
-      (pins H1-4)
-    )
-    (net "N-000008"
+    (net "N-0000015"
       (pins R8-2 D1-1)
     )
+    (net "N-0000016"
+      (pins R4-2 JP2-2 JP2-2@1)
+    )
+    (net "N-0000017"
+      (pins Q1-3 U2-1 JP2-1)
+    )
+    (net "N-0000019"
+      (pins D7-2)
+    )
+    (net "N-0000020"
+      (pins H2-8 JP1-1)
+    )
+    (net "N-0000021"
+      (pins H2-2)
+    )
+    (net "N-0000022"
+      (pins H1-7)
+    )
+    (net "N-0000023"
+      (pins H2-7 JP3-1)
+    )
+    (net "N-0000025"
+      (pins U4-2)
+    )
+    (net "N-0000026"
+      (pins U4-9)
+    )
+    (net "N-0000027"
+      (pins U4-7)
+    )
+    (net "N-0000028"
+      (pins U4-8)
+    )
+    (net "N-0000029"
+      (pins U4-5)
+    )
+    (net "N-000003"
+      (pins U5-6 Q1-1)
+    )
+    (net "N-0000030"
+      (pins U4-19)
+    )
+    (net "N-0000031"
+      (pins U4-18)
+    )
+    (net "N-0000032"
+      (pins U5-2 U5-3 U5-8 R6-2 Q1-2 "Li-Battery1"-1 "Li-Battery1"-1@1 R3-2 D7-1)
+    )
+    (net "N-0000033"
+      (pins D4-2)
+    )
+    (net "N-0000034"
+      (pins D3-2)
+    )
+    (net "N-0000035"
+      (pins R3-1 D4-1)
+    )
+    (net "N-0000036"
+      (pins P2-2 C1-1 D4-3)
+    )
+    (net "N-0000038"
+      (pins U5-7)
+    )
+    (net "N-0000039"
+      (pins U5-1)
+    )
+    (net "N-000004"
+      (pins R1-2 U4-12)
+    )
+    (net "N-0000059"
+      (pins P1-3 R1-1 VR2-1)
+    )
+    (net "N-000006"
+      (pins R10-2 D5-2)
+    )
+    (net "N-0000060"
+      (pins P1-2 R2-1 VR1-1)
+    )
+    (net "N-0000061"
+      (pins P1-4 F1-1)
+    )
+    (net "N-0000062"
+      (pins H1-9)
+    )
+    (net "N-0000063"
+      (pins H1-8)
+    )
+    (net "N-0000064"
+      (pins H1-6)
+    )
+    (net "N-0000065"
+      (pins H1-4)
+    )
+    (net "N-0000068"
+      (pins H2-9)
+    )
+    (net "N-0000069"
+      (pins H2-10)
+    )
+    (net "N-000007"
+      (pins H1-2 U4-4)
+    )
+    (net "N-0000070"
+      (pins H2-6)
+    )
+    (net "N-0000071"
+      (pins H2-5)
+    )
+    (net "N-0000072"
+      (pins H2-4)
+    )
+    (net "N-0000073"
+      (pins H2-3)
+    )
+    (net "N-0000074"
+      (pins H2-1)
+    )
+    (net "N-000008"
+      (pins R2-2 U4-11)
+    )
     (net "N-000009"
-      (pins R1-1 VR2-1 P1-3)
+      (pins C9-1 H1-5)
     )
     (net USB_VDD
-      (pins F1-2 C3-1 R8-1 R9-1 U4-15 D3-3 D6-2)
+      (pins F1-2 C3-1 R8-1 R9-1 D3-3 D6-2 U4-15)
     )
     (net VCCIO
       (pins C4-1 U4-3 U4-13 U4-14)
     )
+    (net _MT_PF2
+      (pins U5-4 D5-1 JP1-2 JP1-2@1)
+    )
+    (net _MT_PF3
+      (pins R4-1 R5-1 JP3-2 JP3-2@1)
+    )
     (class kicad_default "" BAT+ GND "N-000001" "N-0000010" "N-0000011" "N-0000012"
-      "N-0000013" "N-0000017" "N-0000018" "N-0000019" "N-000002" "N-0000020"
-      "N-0000021" "N-0000022" "N-0000023" "N-0000024" "N-0000025" "N-0000026"
+      "N-0000013" "N-0000014" "N-0000015" "N-0000016" "N-0000017" "N-0000019"
+      "N-0000020" "N-0000021" "N-0000022" "N-0000023" "N-0000025" "N-0000026"
       "N-0000027" "N-0000028" "N-0000029" "N-000003" "N-0000030" "N-0000031"
-      "N-0000032" "N-0000033" "N-0000034" "N-0000035" "N-000004" "N-000005"
-      "N-0000056" "N-0000057" "N-0000058" "N-0000059" "N-000006" "N-0000060"
-      "N-0000061" "N-0000062" "N-0000063" "N-0000064" "N-0000065" "N-0000066"
-      "N-0000067" "N-0000068" "N-0000069" "N-000007" "N-0000070" "N-0000071"
-      "N-000008" "N-000009" USB_VDD VCCIO
+      "N-0000032" "N-0000033" "N-0000034" "N-0000035" "N-0000036" "N-0000038"
+      "N-0000039" "N-000004" "N-0000059" "N-000006" "N-0000060" "N-0000061"
+      "N-0000062" "N-0000063" "N-0000064" "N-0000065" "N-0000068" "N-0000069"
+      "N-000007" "N-0000070" "N-0000071" "N-0000072" "N-0000073" "N-0000074"
+      "N-000008" "N-000009" USB_VDD VCCIO _MT_PF2 _MT_PF3
       (circuit
         (use_via Via[0-1]_889:635_um)
       )
       (rule
-        (width 254)
-        (clearance 254.1)
+        (width 203.2)
+        (clearance 203.3)
       )
     )
   )
   (wiring
+    (wire (path F.Cu 254  147850 -108320  147842 -108328  146070 -108328)(net "N-0000016")(type protect))
+    (wire (path F.Cu 254  149150 -108320  149452 -108622)(net "N-0000016")(type protect))
+    (wire (path F.Cu 254  149452 -108622  149452 -109780)(net "N-0000017")(type protect))
+    (wire (path F.Cu 254  157638 -111680  156962 -111004)(net "N-0000023")(type protect))
+    (wire (path F.Cu 254  162042 -107670  162042 -109004)(net _MT_PF2)(type protect))
+    (wire (path F.Cu 254  162042 -111680  157638 -111680)(net _MT_PF3)(type protect))
   )
 )
