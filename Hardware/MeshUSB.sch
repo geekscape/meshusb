@@ -313,8 +313,6 @@ F 3 "" H 4250 1850 30  0000 C CNN
 $EndComp
 Text GLabel 3300 1850 0    60   Input ~ 0
 USB_VDD
-Text Notes 1550 7250 0    60   ~ 0
-Zener reverse current between USB-VDD and GND? \nProbably should...
 $Comp
 L GND #PWR04
 U 1 1 52315DFC
@@ -350,8 +348,8 @@ F 3 "" H 9900 2400 30  0000 C CNN
 	1    9900 2400
 	1    0    0    -1  
 $EndComp
-Text Notes 9400 3100 0    60   ~ 0
-Optional Charge \nFull Indicator...\nOtherwise NC HBO\n...Active High!
+Text Notes 9150 3550 0    60   ~ 0
+Optional Charge \nFull Indicator...\nOtherwise NC HBO\n...Active High!\nSeems this doesn't light when MT is inserted, \nmaybe fixed by changing R6, D3 or both.
 Text Notes 2750 1100 0    60   ~ 0
 R6 chosen to limit shunt current to 50mA.\n(4.3v-3.2v)/22=50mA max charge current.\n(4.3v-3.2v)^2/33=55mW PwrDiss\n(4.3v-4.1v)/33=3.03mA max shunt current.\n
 $Comp
@@ -648,8 +646,8 @@ NoConn ~ 5150 5850
 NoConn ~ 5150 5750
 NoConn ~ 5150 5550
 NoConn ~ 5150 5450
-Text Notes 650  3300 0    60   ~ 0
-Still TODO for v0.2:\nJumpers for... what needs jumpers? Something must. \n  Charge full indicator? Tx/Rx LEDs? USB vdd?\nTest points?
+Text Notes 850  3950 0    60   ~ 0
+Still TODO for v0.3:\nBetter values for current limiting Rs to charging circuitry.\nC1 lower value, higher voltage rating.\nPads for higher current charging/DRV on 4070.\nFiducials.\nReconsider changing back to shottkey diodes for charging circuitry.\nJumpers for... what needs jumpers? Something must. \n  Charge full indicator? Tx/Rx LEDs? USB vdd?\nTest points?\n
 Connection ~ 3150 4850
 $Comp
 L ZENER D6
