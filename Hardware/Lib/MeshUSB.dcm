@@ -1,12 +1,12 @@
-EESchema-DOCLIB  Version 2.0  Date: Thu 10 Oct 2013 18:34:04 EST
+EESchema-DOCLIB  Version 2.0
 #
-$CMP AP7313-3.3VRegulator
+$CMP AP7313-3.3VREGULATOR
 D LM1084IS, 5A 29V Adjustable Linear Regulator, TO-263 (D2-PAK)
 K Adjustable Voltage Regulator 5A Positive
 F http://www.ti.com/lit/ds/symlink/lm1084.pdf
 $ENDCMP
 #
-$CMP AP7313R-3.3VRegulator
+$CMP AP7313R-3.3VREGULATOR
 D LM1084IS, 5A 29V Adjustable Linear Regulator, TO-263 (D2-PAK)
 K Adjustable Voltage Regulator 5A Positive
 F http://www.ti.com/lit/ds/symlink/lm1084.pdf
@@ -20,6 +20,11 @@ $CMP ATMEGA328-P
 D ATMEGA328, PDIP28 Narrow, 32k Flash, 2kB SRAM, 1kB EEPROM
 K AVR 8bit Microcontroller MegaAVR
 F http://www.atmel.com/dyn/resources/prod_documents/doc8271.pdf
+$ENDCMP
+#
+$CMP BAT54C
+D Diode schottky
+K DEV DIODE
 $ENDCMP
 #
 $CMP CONN_4

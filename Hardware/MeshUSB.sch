@@ -264,8 +264,8 @@ F 3 "" H 2600 5550 30  0000 C CNN
 	1    2600 5550
 	0    -1   -1   0   
 $EndComp
-Text Notes 4600 6950 0    49   ~ 0
-MTTF Max Power should be set to allow for up to 200mA on the USB bus.\nMaybe even up to 500mA??\n\nNo. Default 90mA for now.
+Text Notes 2600 7600 0    49   ~ 0
+MTTF Max Power can be set to allow for up to 500mA on the USB bus.\n200mA is probably the max recommended - shouldn't need more under any circumstances.\nDefault stays at 90mA for now.
 $Comp
 L LTC4070 U5
 U 1 1 52312087
@@ -288,30 +288,8 @@ F 3 "" H 1850 2650 60  0000 C CNN
 	1    1850 2650
 	-1   0    0    1   
 $EndComp
-$Comp
-L C C1
-U 1 1 52312498
-P 2500 2650
-F 0 "C1" H 2500 2750 40  0000 L CNN
-F 1 "10uF" H 2506 2565 40  0000 L CNN
-F 2 "" H 2538 2500 30  0000 C CNN
-F 3 "" H 2500 2650 60  0000 C CNN
-	1    2500 2650
-	1    0    0    -1  
-$EndComp
 NoConn ~ 7250 2800
-$Comp
-L R R6
-U 1 1 52314992
-P 4250 1850
-F 0 "R6" V 4330 1850 40  0000 C CNN
-F 1 "22R" V 4257 1851 40  0000 C CNN
-F 2 "" V 4180 1850 30  0000 C CNN
-F 3 "" H 4250 1850 30  0000 C CNN
-	1    4250 1850
-	0    -1   -1   0   
-$EndComp
-Text GLabel 3300 1850 0    60   Input ~ 0
+Text GLabel 3300 1900 0    60   Input ~ 0
 USB_VDD
 $Comp
 L GND #PWR04
@@ -324,7 +302,7 @@ F 3 "" H 9200 3800 60  0000 C CNN
 	1    9200 3800
 	1    0    0    -1  
 $EndComp
-Text Notes 6800 1700 0    60   ~ 0
+Text Notes 7050 2400 0    60   ~ 0
 ADJ -> Vcc \n= 4.2v Vout.\nADJ  -> NC\n=4.1v Vout.
 $Comp
 L LED D5
@@ -349,9 +327,9 @@ F 3 "" H 9900 2400 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 9150 3550 0    60   ~ 0
-Optional Charge \nFull Indicator...\nOtherwise NC HBO\n...Active High!\nSeems this doesn't light when MT is inserted, \nmaybe fixed by changing R6, D3 or both.
-Text Notes 2750 1100 0    60   ~ 0
-R6 chosen to limit shunt current to 50mA.\n(4.3v-3.2v)/22=50mA max charge current.\n(4.3v-3.2v)^2/33=55mW PwrDiss\n(4.3v-4.1v)/33=3.03mA max shunt current.\n
+Optional Charge \nFull Indicator...\nOtherwise NC HBO\n...Active High!\nSeems this doesn't light when MT is inserted, \nthink this should be fixed by changes to charging diodes.
+Text Notes 3650 2750 0    60   ~ 0
+R3 chosen to limit shunt current to 50mA.\n(4.5v-3.2v)/10=130mA max charge current.\n(4.5v-3.2v)^2/10=169mW PwrDiss\n(4.5v-4.1v)/40=mA max shunt current.\n
 $Comp
 L CONN_10 H1
 U 1 1 5232A47B
@@ -407,12 +385,12 @@ NoConn ~ 5950 5000
 NoConn ~ 5950 5100
 Text Notes 6200 5450 0    60   ~ 0
 Conn_10s are for the smd headers in case I don't get around to\nincorporating them in a 20 pin xbee ff footprint.
-Text Notes 6900 1250 0    60   ~ 0
+Text Notes 7150 1250 0    60   ~ 0
 PMOS1 does Low Battery cutoff.
 Text GLabel 5950 1350 0    60   Input ~ 0
 BAT+
-Text Notes 2850 2600 0    60   ~ 0
-D3/D4 Fw Drop Approx. 0.7V\nAssume 5V for PC
+Text Notes 3650 2350 0    60   ~ 0
+Fw Drop Approx. 0.5V @ 100mA
 NoConn ~ 8550 3000
 $Comp
 L MOS_P-INFINEON-BSS83P Q1
@@ -554,8 +532,6 @@ Wire Wire Line
 	7800 3500 8000 3500
 Connection ~ 7900 3500
 Wire Wire Line
-	4550 2000 10350 2000
-Wire Wire Line
 	10350 2100 10300 2100
 Wire Wire Line
 	10300 2100 10300 3600
@@ -564,24 +540,7 @@ Wire Wire Line
 Connection ~ 7900 2000
 Connection ~ 9200 3600
 Wire Wire Line
-	2500 2150 3500 2150
-Wire Wire Line
-	3300 1850 3500 1850
-Wire Wire Line
-	3900 1850 4000 1850
-Wire Wire Line
-	4500 1850 4550 1850
-Wire Wire Line
-	4550 1850 4550 2150
-Connection ~ 4550 2000
-Wire Notes Line
-	2800 1750 4750 1750
-Wire Notes Line
-	4750 1750 4750 2350
-Wire Notes Line
-	4750 2350 2800 2350
-Wire Notes Line
-	2800 2350 2800 1750
+	3300 1900 3600 1900
 Wire Wire Line
 	9900 2650 9900 2750
 Wire Wire Line
@@ -647,7 +606,7 @@ NoConn ~ 5150 5750
 NoConn ~ 5150 5550
 NoConn ~ 5150 5450
 Text Notes 850  3950 0    60   ~ 0
-Still TODO for v0.3:\nBetter values for current limiting Rs to charging circuitry.\nC1 lower value, higher voltage rating.\nPads for higher current charging/DRV on 4070.\nFiducials.\nReconsider changing back to shottkey diodes for charging circuitry.\nJumpers for... what needs jumpers? Something must. \n  Charge full indicator? Tx/Rx LEDs? USB vdd?\nTest points?\n
+Still TODO for v0.3:\nC1 lower value, higher voltage rating.\nPads for higher current charging/DRV on 4070.\nJumpers for... what needs jumpers? Something must. \n  Cutoff battery charging. Charge full indicator? Tx/Rx LEDs? USB vdd?\nTest points?\nJumper/switch for enable/disable ~DTR reset.\n
 Connection ~ 3150 4850
 $Comp
 L ZENER D6
@@ -666,9 +625,6 @@ Connection ~ 2000 7050
 Wire Wire Line
 	3000 5850 3000 4550
 Connection ~ 3000 4550
-Wire Wire Line
-	7250 2600 7250 2000
-Connection ~ 7250 2000
 $Comp
 L AP7313-3.3VREGULATOR U2
 U 1 1 52564B55
@@ -686,59 +642,25 @@ Wire Wire Line
 	6500 3600 6500 1650
 Connection ~ 7900 3600
 Wire Wire Line
-	2500 2150 2500 2450
-Wire Wire Line
 	2200 2550 2200 2300
 Wire Wire Line
 	2200 2300 2500 2300
-Connection ~ 2500 2300
 Wire Wire Line
 	2200 2750 2200 3050
 Wire Wire Line
 	2200 3050 6500 3050
-Wire Wire Line
-	2500 3050 2500 2850
 Connection ~ 6500 3050
-Connection ~ 2500 3050
 $Comp
-L R R3
+L R R30
 U 1 1 525651B6
-P 4250 2150
-F 0 "R3" V 4330 2150 40  0000 C CNN
-F 1 "22R" V 4257 2151 40  0000 C CNN
-F 2 "" V 4180 2150 30  0000 C CNN
-F 3 "" H 4250 2150 30  0000 C CNN
-	1    4250 2150
+P 4600 2000
+F 0 "R30" V 4680 2000 40  0000 C CNN
+F 1 "10R" V 4607 2001 40  0000 C CNN
+F 2 "" V 4530 2000 30  0000 C CNN
+F 3 "" H 4600 2000 30  0000 C CNN
+	1    4600 2000
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	4000 2150 3900 2150
-Wire Wire Line
-	4550 2150 4500 2150
-$Comp
-L DIODE-NC D3
-U 1 1 52565A5F
-P 3700 1850
-F 0 "D3" H 3700 1950 40  0000 C CNN
-F 1 "DIODE-NC" H 3500 1750 40  0000 C CNN
-F 2 "" H 3700 1850 60  0000 C CNN
-F 3 "" H 3700 1850 60  0000 C CNN
-	1    3700 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L DIODE-NC D4
-U 1 1 52565A6E
-P 3700 2150
-F 0 "D4" H 3700 2250 40  0000 C CNN
-F 1 "DIODE-NC" H 3500 2050 40  0000 C CNN
-F 2 "" H 3700 2150 60  0000 C CNN
-F 3 "" H 3700 2150 60  0000 C CNN
-	1    3700 2150
-	1    0    0    -1  
-$EndComp
-NoConn ~ 3700 2000
-NoConn ~ 3700 2300
 $Comp
 L DIODE-NC D7
 U 1 1 5258D632
@@ -866,4 +788,79 @@ Wire Wire Line
 	9700 4300 9700 4500
 Wire Wire Line
 	9700 4500 9500 4500
+Text Notes 3650 1600 0    60   ~ 0
+Charging max values\ncharge I - 125mA=1C battery\nPwrDiss - 200mW (?) - depends on R3\nshunt I - 50 mA\n
+NoConn ~ 7250 2600
+Wire Wire Line
+	2500 2300 2500 2100
+$Comp
+L BAT54C D30
+U 1 1 530432F5
+P 3900 2000
+F 0 "D30" H 3750 2250 40  0000 C CNN
+F 1 "BAT54C" H 4000 1750 40  0000 C CNN
+F 2 "" H 3800 1900 60  0000 C CNN
+F 3 "" H 3800 1900 60  0000 C CNN
+	1    3900 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2100 3600 2100
+Wire Wire Line
+	4200 2000 4350 2000
+Wire Wire Line
+	4850 2000 10350 2000
+$Comp
+L CONN_1 F1
+U 1 1 53044226
+P 10100 5700
+F 0 "F1" H 10180 5700 40  0000 L CNN
+F 1 "CONN_1" H 10100 5755 30  0001 C CNN
+F 2 "" H 10100 5700 60  0000 C CNN
+F 3 "" H 10100 5700 60  0000 C CNN
+	1    10100 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 F2
+U 1 1 5304423A
+P 10100 5800
+F 0 "F2" H 10180 5800 40  0000 L CNN
+F 1 "CONN_1" H 10100 5855 30  0001 C CNN
+F 2 "" H 10100 5800 60  0000 C CNN
+F 3 "" H 10100 5800 60  0000 C CNN
+	1    10100 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 F3
+U 1 1 5304424E
+P 10100 5900
+F 0 "F3" H 10180 5900 40  0000 L CNN
+F 1 "CONN_1" H 10100 5955 30  0001 C CNN
+F 2 "" H 10100 5900 60  0000 C CNN
+F 3 "" H 10100 5900 60  0000 C CNN
+	1    10100 5900
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9950 5700
+NoConn ~ 9950 5800
+NoConn ~ 9950 5900
+$Comp
+L C C30
+U 1 1 5304450F
+P 6000 2500
+F 0 "C30" H 6000 2600 40  0000 L CNN
+F 1 "100n" H 6006 2415 40  0000 L CNN
+F 2 "" H 6038 2350 30  0000 C CNN
+F 3 "" H 6000 2500 60  0000 C CNN
+	1    6000 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2300 6000 2000
+Connection ~ 6000 2000
+Wire Wire Line
+	6000 2700 6000 3050
+Connection ~ 6000 3050
 $EndSCHEMATC
