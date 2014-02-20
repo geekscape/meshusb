@@ -1,9 +1,121 @@
-Cmp-Mod V01 Created by CvPcb (2013-mar-13)-testing date = Mon 14 Oct 2013 23:21:57 EST
+Cmp-Mod V01 Created by CvPcb (2013-12-14 BZR 4555)-product date = Thu 20 Feb 2014 11:56:35 EST
 
 BeginCmp
-TimeStamp = /52312498;
-Reference = C1;
-ValeurCmp = 10uF;
+TimeStamp = /522EB270;
+Reference = U1;
+ValeurCmp = XBEE;
+IdModule  = _MUSB_XBee_Board_OUTLINE_ONLY;
+EndCmp
+
+BeginCmp
+TimeStamp = /522EB4BD;
+Reference = P1;
+ValeurCmp = USB_4;
+IdModule  = _MUSB_USB-A-PCB;
+EndCmp
+
+BeginCmp
+TimeStamp = /522FDA2E;
+Reference = U4;
+ValeurCmp = FT231X-SSOP;
+IdModule  = _MUSB_SSOP20-FT231X;
+EndCmp
+
+BeginCmp
+TimeStamp = /525BE6B9;
+Reference = JP3;
+ValeurCmp = JUMPER;
+IdModule  = _MUSB_SMTJumper;
+EndCmp
+
+BeginCmp
+TimeStamp = /525BDD98;
+Reference = JP2;
+ValeurCmp = JUMPER;
+IdModule  = _MUSB_SMTJumper;
+EndCmp
+
+BeginCmp
+TimeStamp = /525BDBD8;
+Reference = JP1;
+ValeurCmp = JUMPER;
+IdModule  = _MUSB_SMTJumper;
+EndCmp
+
+BeginCmp
+TimeStamp = /5254E5F2;
+Reference = D6;
+ValeurCmp = ZENER;
+IdModule  = _MUSB_SMAZ5V6-Zener-DO214;
+EndCmp
+
+BeginCmp
+TimeStamp = /522EBD4D;
+Reference = VR1;
+ValeurCmp = VR0603;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /522EBD5A;
+Reference = VR2;
+ValeurCmp = VR0603;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /52316266;
+Reference = R10;
+ValeurCmp = 270;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /522FF155;
+Reference = R9;
+ValeurCmp = 270;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /522FF148;
+Reference = R8;
+ValeurCmp = 270;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /525BDF6F;
+Reference = R5;
+ValeurCmp = 22k;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /525BDECB;
+Reference = R4;
+ValeurCmp = 22k;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /523001D7;
+Reference = R2;
+ValeurCmp = 22R;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /52300256;
+Reference = R1;
+ValeurCmp = 22R;
+IdModule  = _MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /522FDDF5;
+Reference = C4;
+ValeurCmp = 100n;
 IdModule  = _MUSB_SM0603_Capa;
 EndCmp
 
@@ -15,17 +127,24 @@ IdModule  = _MUSB_SM0603_Capa;
 EndCmp
 
 BeginCmp
-TimeStamp = /522FDDF5;
-Reference = C4;
+TimeStamp = /522FE8A3;
+Reference = C9;
 ValeurCmp = 100n;
 IdModule  = _MUSB_SM0603_Capa;
 EndCmp
 
 BeginCmp
-TimeStamp = /522FE8A3;
-Reference = C9;
-ValeurCmp = 100n;
-IdModule  = _MUSB_SM0603_Capa;
+TimeStamp = /522EB9C4;
+Reference = Li-Battery1;
+ValeurCmp = BAT2;
+IdModule  = _MUSB_MPD-BK-5033_2450BatteryHolder;
+EndCmp
+
+BeginCmp
+TimeStamp = /522EBD3E;
+Reference = F1;
+ValeurCmp = FUSE;
+IdModule  = _MUSB_MF-MSMF050-Fuse;
 EndCmp
 
 BeginCmp
@@ -43,45 +162,10 @@ IdModule  = _MUSB_LED-0603;
 EndCmp
 
 BeginCmp
-TimeStamp = /52565A5F;
-Reference = D3;
-ValeurCmp = DIODE-NC;
-IdModule  = SOT23;
-EndCmp
-
-BeginCmp
-TimeStamp = /52565A6E;
-Reference = D4;
-ValeurCmp = DIODE-NC;
-IdModule  = SOT23;
-EndCmp
-
-BeginCmp
 TimeStamp = /52316257;
 Reference = D5;
 ValeurCmp = LED;
 IdModule  = _MUSB_LED-0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /5254E5F2;
-Reference = D6;
-ValeurCmp = ZENER;
-IdModule  = _MUSB_SMAZ5V6-Zener-DO214;
-EndCmp
-
-BeginCmp
-TimeStamp = /5258D632;
-Reference = D7;
-ValeurCmp = DIODE-NC;
-IdModule  = SOT23;
-EndCmp
-
-BeginCmp
-TimeStamp = /522EBD3E;
-Reference = F1;
-ValeurCmp = FUSE;
-IdModule  = _MUSB_MF-MSMF050-Fuse;
 EndCmp
 
 BeginCmp
@@ -99,45 +183,17 @@ IdModule  = _MUSB-FEMALE-HEADER-NPPN101BFLC-RC-Pin1Left;
 EndCmp
 
 BeginCmp
-TimeStamp = /525BDBD8;
-Reference = JP1;
-ValeurCmp = JUMPER;
-IdModule  = _MUSB_SMTJumper;
+TimeStamp = /52312087;
+Reference = U5;
+ValeurCmp = LTC4070;
+IdModule  = SSOP8-9;
 EndCmp
 
 BeginCmp
-TimeStamp = /525BDD98;
-Reference = JP2;
-ValeurCmp = JUMPER;
-IdModule  = _MUSB_SMTJumper;
-EndCmp
-
-BeginCmp
-TimeStamp = /525BE6B9;
-Reference = JP3;
-ValeurCmp = JUMPER;
-IdModule  = _MUSB_SMTJumper;
-EndCmp
-
-BeginCmp
-TimeStamp = /522EB9C4;
-Reference = Li-Battery1;
-ValeurCmp = BAT2;
-IdModule  = _MUSB_MPD-BK-5033_2450BatteryHolder;
-EndCmp
-
-BeginCmp
-TimeStamp = /522EB4BD;
-Reference = P1;
-ValeurCmp = USB_4;
-IdModule  = _MUSB_USB-A-PCB;
-EndCmp
-
-BeginCmp
-TimeStamp = /523120A0;
-Reference = P2;
-ValeurCmp = PVCell;
-IdModule  = PIN_ARRAY_2X1;
+TimeStamp = /5258D632;
+Reference = D7;
+ValeurCmp = DIODE-NC;
+IdModule  = SOT23;
 EndCmp
 
 BeginCmp
@@ -148,76 +204,6 @@ IdModule  = SOT23;
 EndCmp
 
 BeginCmp
-TimeStamp = /52300256;
-Reference = R1;
-ValeurCmp = 22R;
-IdModule  = _MUSB_SM0603_Resistor;
-EndCmp
-
-BeginCmp
-TimeStamp = /523001D7;
-Reference = R2;
-ValeurCmp = 22R;
-IdModule  = _MUSB_SM0603_Resistor;
-EndCmp
-
-BeginCmp
-TimeStamp = /525651B6;
-Reference = R3;
-ValeurCmp = 22R;
-IdModule  = _MUSB_SM0603_Resistor;
-EndCmp
-
-BeginCmp
-TimeStamp = /525BDECB;
-Reference = R4;
-ValeurCmp = 22k;
-IdModule  = _MUSB_SM0603_Resistor;
-EndCmp
-
-BeginCmp
-TimeStamp = /525BDF6F;
-Reference = R5;
-ValeurCmp = 22k;
-IdModule  = _MUSB_SM0603_Resistor;
-EndCmp
-
-BeginCmp
-TimeStamp = /52314992;
-Reference = R6;
-ValeurCmp = 22R;
-IdModule  = _MUSB_SM0603_Resistor;
-EndCmp
-
-BeginCmp
-TimeStamp = /522FF148;
-Reference = R8;
-ValeurCmp = 270;
-IdModule  = _MUSB_SM0603_Resistor;
-EndCmp
-
-BeginCmp
-TimeStamp = /522FF155;
-Reference = R9;
-ValeurCmp = 270;
-IdModule  = _MUSB_SM0603_Resistor;
-EndCmp
-
-BeginCmp
-TimeStamp = /52316266;
-Reference = R10;
-ValeurCmp = 270;
-IdModule  = _MUSB_SM0603_Resistor;
-EndCmp
-
-BeginCmp
-TimeStamp = /522EB270;
-Reference = U1;
-ValeurCmp = XBEE;
-IdModule  = _MUSB_XBee_Board_OUTLINE_ONLY;
-EndCmp
-
-BeginCmp
 TimeStamp = /52564B55;
 Reference = U2;
 ValeurCmp = AP7313-3.3VREGULATOR;
@@ -225,31 +211,52 @@ IdModule  = SOT23;
 EndCmp
 
 BeginCmp
-TimeStamp = /522FDA2E;
-Reference = U4;
-ValeurCmp = FT231X-SSOP;
-IdModule  = _MUSB_SSOP20-FT231X;
+TimeStamp = /523120A0;
+Reference = P2;
+ValeurCmp = PVCell;
+IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
-TimeStamp = /52312087;
-Reference = U5;
-ValeurCmp = LTC4070;
-IdModule  = SSOP8-9;
+TimeStamp = /530432F5;
+Reference = D30;
+ValeurCmp = BAT54C;
+IdModule  = SMD_Packages:SOT23;
 EndCmp
 
 BeginCmp
-TimeStamp = /522EBD4D;
-Reference = VR1;
-ValeurCmp = VR0603;
-IdModule  = _MUSB_SM0603_Resistor;
+TimeStamp = /53044226;
+Reference = Fi1;
+ValeurCmp = CONN_1;
+IdModule  = ;
 EndCmp
 
 BeginCmp
-TimeStamp = /522EBD5A;
-Reference = VR2;
-ValeurCmp = VR0603;
-IdModule  = _MUSB_SM0603_Resistor;
+TimeStamp = /525651B6;
+Reference = R30;
+ValeurCmp = 10R;
+IdModule  = _MUSB_:_MUSB_SM0603_Resistor;
+EndCmp
+
+BeginCmp
+TimeStamp = /5304450F;
+Reference = C30;
+ValeurCmp = 100n;
+IdModule  = _MUSB_:_MUSB_SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /5304423A;
+Reference = Fi2;
+ValeurCmp = CONN_1;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /5304424E;
+Reference = Fi3;
+ValeurCmp = CONN_1;
+IdModule  = ;
 EndCmp
 
 EndListe
