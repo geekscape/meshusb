@@ -390,7 +390,6 @@ Text GLabel 5950 1350 0    60   Input ~ 0
 BAT+
 Text Notes 3650 2350 0    60   ~ 0
 Fw Drop Approx. 0.5V @ 100mA
-NoConn ~ 8550 3000
 $Comp
 L MOS_P-INFINEON-BSS83P Q1
 U 1 1 52355F92
@@ -467,7 +466,7 @@ F 3 "" H 6750 2700 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 NoConn ~ 6900 2700
-Text GLabel 8950 2900 3    60   Input ~ 0
+Text GLabel 9150 2650 1    60   Input ~ 0
 _MT_PF2
 Text GLabel 10400 4300 2    60   Input ~ 0
 _MT_PF2
@@ -825,9 +824,6 @@ Wire Wire Line
 	6750 2900 6750 3600
 Connection ~ 6750 3600
 Wire Wire Line
-	8950 2900 8950 2750
-Connection ~ 8950 2750
-Wire Wire Line
 	7100 1350 7100 900 
 Connection ~ 7100 1350
 Wire Wire Line
@@ -910,4 +906,26 @@ F 3 "" H 5500 4700 60  0000 C CNN
 	1    5500 4700
 	1    0    0    -1  
 $EndComp
+$Comp
+L MOS_P-INFINEON-BSS83P Q?
+U 1 1 53080F7D
+P 8800 3000
+F 0 "Q?" H 8800 3190 60  0000 R CNN
+F 1 "MOS_P-INFINEON-BSS83P" H 8800 2820 60  0001 R CNN
+F 2 "" H 8800 3000 60  0000 C CNN
+F 3 "" H 8800 3000 60  0000 C CNN
+	1    8800 3000
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8550 3000 8600 3000
+Connection ~ 8900 2000
+Wire Wire Line
+	8900 3200 8900 3600
+Connection ~ 8900 3600
+Wire Wire Line
+	9150 2650 9150 2750
+Connection ~ 9150 2750
+Wire Wire Line
+	8900 2000 8900 2800
 $EndSCHEMATC
