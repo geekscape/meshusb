@@ -590,11 +590,11 @@ L CONN_2 P30
 U 1 1 5307F372
 P 10800 2600
 F 0 "P30" V 10750 2600 40  0000 C CNN
-F 1 "CONN_2" V 10850 2600 40  0000 C CNN
+F 1 "JST_2" V 10850 2600 40  0000 C CNN
 F 2 "" H 10800 2600 60  0000 C CNN
 F 3 "" H 10800 2600 60  0000 C CNN
 	1    10800 2600
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Text Notes 11050 2500 0    60   ~ 0
 Exposed pins for charging... User must be careful!\nDo these as JST 2mm?

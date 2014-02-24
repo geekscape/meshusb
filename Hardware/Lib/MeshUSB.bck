@@ -42,6 +42,11 @@ D Diode simple
 K DEV DIODE
 $ENDCMP
 #
+$CMP Dual_Shottkey_Package
+D Diode schottky
+K DEV DIODE
+$ENDCMP
+#
 $CMP FDN340P
 F transistors/mos/*.*
 $ENDCMP

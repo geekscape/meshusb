@@ -42,7 +42,7 @@ D Diode simple
 K DEV DIODE
 $ENDCMP
 #
-$CMP Dual_Shottkey_Package
+$CMP DUAL_SHOTTKEY_PACKAGE
 D Diode schottky
 K DEV DIODE
 $ENDCMP

@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/bob/Git/MeshAge/meshusb/Hardware/MeshUSB.sch)
-    (date "Mon 24 Feb 2014 12:45:22 EST")
+    (date "Mon 24 Feb 2014 14:12:09 EST")
     (tool "eeschema (2013-12-14 BZR 4555)-product"))
   (components
     (comp (ref U1)
@@ -185,7 +185,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 53057C45))
     (comp (ref P30)
-      (value CONN_2)
+      (value JST_2)
       (libsource (lib conn) (part CONN_2))
       (sheetpath (names /) (tstamps /))
       (tstamp 5307F372))
@@ -330,13 +330,6 @@
         (pin (num 1) (name IN) (type input))
         (pin (num 2) (name OUT) (type power_out))
         (pin (num 3) (name GND) (type input))))
-    (libpart (lib MeshUSB) (part CONN_TH_JMPR_DefaultClosed)
-      (description "1 pin")
-      (fields
-        (field (name Reference) JP)
-        (field (name Value) CONN_TH_JMPR_DefaultClosed))
-      (pins
-        (pin (num 1) (name 1) (type passive))))
     (libpart (lib MeshUSB) (part DIODE-NC)
       (description "Diode simple")
       (footprints
@@ -349,6 +342,18 @@
         (pin (num 1) (name K) (type passive))
         (pin (num 2) (name NC) (type input))
         (pin (num 3) (name A) (type passive))))
+    (libpart (lib MeshUSB) (part Dual_Shottkey_Package)
+      (description "Diode schottky")
+      (footprints
+        (fp D?)
+        (fp S*))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) Dual_Shottkey_Package))
+      (pins
+        (pin (num 1) (name A1) (type passive))
+        (pin (num 2) (name A2) (type passive))
+        (pin (num 3) (name K) (type passive))))
     (libpart (lib MeshUSB) (part FT231X-SSOP)
       (fields
         (field (name Reference) U)
@@ -436,18 +441,14 @@
         (pin (num 18) (name AD2/DIO2) (type BiDi))
         (pin (num 19) (name AD1/DIO1) (type BiDi))
         (pin (num 20) (name AD0/DIO0) (type BiDi))))
-    (libpart (lib MeshUSB) (part Dual_Shottkey_Package)
-      (description "Diode schottky")
-      (footprints
-        (fp D?)
-        (fp S*))
+    (libpart (lib MeshUSB) (part CONN_TH_JMPR_DefaultClosed)
+      (description "1 pin")
       (fields
-        (field (name Reference) D)
-        (field (name Value) Dual_Shottkey_Package))
+        (field (name Reference) JP)
+        (field (name Value) CONN_TH_JMPR_DefaultClosed))
       (pins
-        (pin (num 1) (name A1) (type passive))
-        (pin (num 2) (name A2) (type passive))
-        (pin (num 3) (name K) (type passive)))))
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type input)))))
   (libraries
     (library (logical device)
       (uri /usr/local/share/kicad/library/device.lib))
@@ -549,6 +550,7 @@
       (node (ref Q2) (pin 1))
       (node (ref U5) (pin 7)))
     (net (code 30) (name "Net-(H1-Pad5)")
+      (node (ref JP2) (pin 2))
       (node (ref H1) (pin 5)))
     (net (code 31) (name "Net-(C9-Pad1)")
       (node (ref C9) (pin 1))
@@ -562,7 +564,7 @@
     (net (code 34) (name GND)
       (node (ref C3) (pin 2))
       (node (ref P1) (pin 1))
-      (node (ref P30) (pin 2))
+      (node (ref P30) (pin 1))
       (node (ref C30) (pin 2))
       (node (ref D7) (pin 3))
       (node (ref R10) (pin 1))
@@ -590,7 +592,7 @@
       (node (ref U5) (pin 8))
       (node (ref Q2) (pin 2))
       (node (ref U5) (pin 2))
-      (node (ref P30) (pin 1))
+      (node (ref P30) (pin 2))
       (node (ref C30) (pin 1)))
     (net (code 37) (name "Net-(Q1-Pad3)")
       (node (ref Q1) (pin 3))
