@@ -420,7 +420,7 @@ NoConn ~ 5150 5750
 NoConn ~ 5150 5550
 NoConn ~ 5150 5450
 Text Notes 850  3950 0    60   ~ 0
-Still TODO for v0.3:\nJumpers for... what needs jumpers? Something must. \n  Cutoff battery charging. Charge full indicator? Tx/Rx LEDs? USB vdd?\nTest points?\n
+Still TODO for v0.3:\nLayout Fiducials.\nJumpers for... what needs jumpers? Something must. \n  Cutoff battery charging. Charge full indicator? Tx/Rx LEDs? USB vdd?\nTest points?\nJump pads for 4070 AJD?\n
 $Comp
 L ZENER D6
 U 1 1 5254E5F2

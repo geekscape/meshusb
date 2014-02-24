@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name _MUSB_)(type Legacy)(uri ${KIPRJMOD}/Lib/MeshUSB.mod)(options "")(descr ""))
   (lib (name _MT_)(type Legacy)(uri ${KIPRJMOD}/Lib/MeshThing.mod)(options "")(descr ""))
+  (lib (name _M9_LOGO_)(type Legacy)(uri ${KIPRJMOD}/Lib/M9Logo/M9Logo-scaled.mod)(options "")(descr ""))
 )
