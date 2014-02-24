@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  Mon 24 Feb 2014 14:17:40 EST
+PCBNEW-LibModule-V1  Mon 24 Feb 2014 15:58:42 EST
 # encoding utf-8
 Units mm
 $INDEX
@@ -530,19 +530,20 @@ Po -2.31 0
 $EndPAD
 $EndMODULE _MUSB_DO-214BA-Schottky
 $MODULE _MUSB_JST-2mm-THs
-Po 0 0 0 15 530AB9D1 00000000 ~~
+Po 0 0 0 15 530AD17F 00000000 ~~
 Li _MUSB_JST-2mm-THs
 Sc 0
 AR 
 Op 0 0 0
 T0 0 1 1 1 0 0.15 N V 21 N "REF**"
 T1 0 -2 1 1 0 0.15 N I 21 N "VAL**"
+DS 2.9 1.7 -2.9 1.7 0.15 21
 DS 2.95 0 2.95 0.9 0.15 21
 DS 2.95 0 2.95 -0.9 0.15 21
 DS -2.95 0 -2.95 0.9 0.15 21
 DS -2.95 0 -2.95 -0.9 0.15 21
 $PAD
-Sh "1" C 1.27 1.27 0 0 0
+Sh "1" R 1.27 1.27 0 0 0
 Dr 0.7 0 0
 At STD N 00E0FFFF
 Ne 0 ""

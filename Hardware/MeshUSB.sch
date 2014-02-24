@@ -601,7 +601,7 @@ Exposed pins for charging... User must be careful!\nDo these as JST 2mm?
 Text Notes 8500 800  0    60   ~ 0
 V.Div. Gives limited range. Get numbers from spreadsheet.
 Text Notes 650  2400 0    60   ~ 0
-Approx. 6V max. without further current limiting. \nDiode forward current is 500mA.
+Approx. 6V max. without further current limiting. \nDiode forward current max. is 500mA.
 Text Notes 5000 4600 0    39   ~ 0
 This is for disabling \nsoft reset ~DTR.\nMake as two .254mm THs \nconnected by default.
 Wire Wire Line
