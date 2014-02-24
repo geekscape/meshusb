@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-12-14 BZR 4555)-product date = Mon 24 Feb 2014 14:12:55 EST
+Cmp-Mod V01 Created by CvPcb (2013-12-14 BZR 4555)-product date = Mon 24 Feb 2014 19:58:38 EST
 
 BeginCmp
 TimeStamp = /522EE470;
@@ -60,14 +60,14 @@ BeginCmp
 TimeStamp = /5258D632;
 Reference = D7;
 ValeurCmp = DIODE-NC;
-IdModule  = SOT23;
+IdModule  = _MUSB_:_MUSB_SOT23;
 EndCmp
 
 BeginCmp
 TimeStamp = /530A8D87;
 Reference = D30;
 ValeurCmp = DUAL_SHOTTKEY_PACKAGE;
-IdModule  = SMD_Packages:SOT23;
+IdModule  = _MUSB_:_MUSB_SOT23;
 EndCmp
 
 BeginCmp
@@ -172,14 +172,14 @@ BeginCmp
 TimeStamp = /52355F92;
 Reference = Q1;
 ValeurCmp = MOS_P;
-IdModule  = SOT23;
+IdModule  = _MUSB_:_MUSB_SOT23;
 EndCmp
 
 BeginCmp
 TimeStamp = /53080F7D;
 Reference = Q2;
 ValeurCmp = MOS_P-INFINEON-BSS83P;
-IdModule  = SMD_Packages:SOT23;
+IdModule  = _MUSB_:_MUSB_SOT23;
 EndCmp
 
 BeginCmp
@@ -235,7 +235,7 @@ BeginCmp
 TimeStamp = /525651B6;
 Reference = R30;
 ValeurCmp = 16R;
-IdModule  = SMD_Packages:SM2512;
+IdModule  = _MUSB_:_MUSB_TE3521-Series_Resistor-6.3x3.2;
 EndCmp
 
 BeginCmp
@@ -249,7 +249,7 @@ BeginCmp
 TimeStamp = /52564B55;
 Reference = U2;
 ValeurCmp = AP7313-3.3VREGULATOR;
-IdModule  = SOT23;
+IdModule  = _MUSB_:_MUSB_SOT23;
 EndCmp
 
 BeginCmp
