@@ -388,8 +388,8 @@ Text Notes 7150 1250 0    60   ~ 0
 PMOS1 does Low Battery cutoff.
 Text GLabel 5950 1350 0    60   Input ~ 0
 BAT+
-Text Notes 3650 2350 0    60   ~ 0
-Fw Drop Approx. 0.5V @ 100mA
+Text Notes 4400 2350 0    60   ~ 0
+Fw Drop Approx. \n0.2V @ 100mA\n0.3V @ 500mA\n
 $Comp
 L MOS_P-INFINEON-BSS83P Q1
 U 1 1 52355F92
@@ -420,7 +420,7 @@ NoConn ~ 5150 5750
 NoConn ~ 5150 5550
 NoConn ~ 5150 5450
 Text Notes 850  3950 0    60   ~ 0
-Still TODO for v0.3:\nFind DRV/low batter cutoff dual PMOS package or descrets.\nJumpers for... what needs jumpers? Something must. \n  Cutoff battery charging. Charge full indicator? Tx/Rx LEDs? USB vdd?\nTest points?\n
+Still TODO for v0.3:\nJumpers for... what needs jumpers? Something must. \n  Cutoff battery charging. Charge full indicator? Tx/Rx LEDs? USB vdd?\nTest points?\n
 $Comp
 L ZENER D6
 U 1 1 5254E5F2
@@ -448,7 +448,7 @@ L R R30
 U 1 1 525651B6
 P 4600 2000
 F 0 "R30" V 4680 2000 40  0000 C CNN
-F 1 "10R" V 4607 2001 40  0000 C CNN
+F 1 "16R" V 4607 2001 40  0000 C CNN
 F 2 "" V 4530 2000 30  0000 C CNN
 F 3 "" H 4600 2000 30  0000 C CNN
 	1    4600 2000
@@ -521,19 +521,8 @@ $EndComp
 NoConn ~ 5950 4900
 NoConn ~ 9500 5100
 Text Notes 3650 1600 0    60   ~ 0
-Charging max values\ncharge I - 125mA=1C battery\nPwrDiss - 200mW (?) - depends on R3\nshunt I - 50 mA\n
+Charging max values\ncharge I - 125mA=1C battery\nPwrDiss - 2W - depends on R30\nshunt I - 50 mA\n
 NoConn ~ 7250 2600
-$Comp
-L BAT54C D30
-U 1 1 530432F5
-P 3900 2000
-F 0 "D30" H 3750 2250 40  0000 C CNN
-F 1 "BAT54C" H 4000 1750 40  0000 C CNN
-F 2 "" H 3800 1900 60  0000 C CNN
-F 3 "" H 3800 1900 60  0000 C CNN
-	1    3900 2000
-	1    0    0    -1  
-$EndComp
 $Comp
 L CONN_1 Fi1
 U 1 1 53044226
@@ -597,21 +586,10 @@ _MT_PE4
 Text GLabel 10050 1650 2    60   Input ~ 0
 _MT_PE4
 $Comp
-L DUALPMOS-ZXMD63P02X U?
-U 1 1 5307F349
-P 1600 1050
-F 0 "U?" H 1500 1350 60  0000 C CNN
-F 1 "DUALPMOS-ZXMD63P02X" H 1650 750 60  0000 C CNN
-F 2 "" H 1600 1050 60  0000 C CNN
-F 3 "" H 1600 1050 60  0000 C CNN
-	1    1600 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_2 P?
+L CONN_2 P30
 U 1 1 5307F372
 P 10800 2600
-F 0 "P?" V 10750 2600 40  0000 C CNN
+F 0 "P30" V 10750 2600 40  0000 C CNN
 F 1 "CONN_2" V 10850 2600 40  0000 C CNN
 F 2 "" H 10800 2600 60  0000 C CNN
 F 3 "" H 10800 2600 60  0000 C CNN
@@ -623,9 +601,7 @@ Exposed pins for charging... User must be careful!\nDo these as JST 2mm?
 Text Notes 8500 800  0    60   ~ 0
 V.Div. Gives limited range. Get numbers from spreadsheet.
 Text Notes 650  2400 0    60   ~ 0
-Approx. 6V max. without further current limiting. \nDiode forward current is 200mA.
-Text Notes 1200 700  0    60   ~ 0
-RDS on might not be sufficiently low for shunt current...\nFind a better choice.
+Approx. 6V max. without further current limiting. \nDiode forward current is 500mA.
 Text Notes 5000 4600 0    39   ~ 0
 This is for disabling \nsoft reset ~DTR.\nMake as two .254mm THs \nconnected by default.
 Wire Wire Line
@@ -896,10 +872,10 @@ Wire Wire Line
 Wire Wire Line
 	5850 4400 5950 4400
 $Comp
-L CONN_TH_JMPR_DEFAULTCLOSED JP?
+L CONN_TH_JMPR_DEFAULTCLOSED JP2
 U 1 1 5308067F
 P 5500 4700
-F 0 "JP?" H 5450 4600 40  0000 L CNN
+F 0 "JP2" H 5450 4600 40  0000 L CNN
 F 1 "CONN_TH_JMPR_DEFAULTCLOSED" H 5500 4800 30  0001 C CNN
 F 2 "" H 5500 4700 60  0000 C CNN
 F 3 "" H 5500 4700 60  0000 C CNN
@@ -907,10 +883,10 @@ F 3 "" H 5500 4700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MOS_P-INFINEON-BSS83P Q?
+L MOS_P-INFINEON-BSS83P Q2
 U 1 1 53080F7D
 P 8800 3000
-F 0 "Q?" H 8800 3190 60  0000 R CNN
+F 0 "Q2" H 8800 3190 60  0000 R CNN
 F 1 "MOS_P-INFINEON-BSS83P" H 8800 2820 60  0001 R CNN
 F 2 "" H 8800 3000 60  0000 C CNN
 F 3 "" H 8800 3000 60  0000 C CNN
@@ -928,4 +904,15 @@ Wire Wire Line
 Connection ~ 9150 2750
 Wire Wire Line
 	8900 2000 8900 2800
+$Comp
+L DUAL_SHOTTKEY_PACKAGE D30
+U 1 1 530A8D87
+P 3900 2000
+F 0 "D30" H 3750 2250 40  0000 C CNN
+F 1 "DUAL_SHOTTKEY_PACKAGE" H 4000 1750 40  0000 C CNN
+F 2 "" H 3800 1900 60  0000 C CNN
+F 3 "" H 3800 1900 60  0000 C CNN
+	1    3900 2000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
