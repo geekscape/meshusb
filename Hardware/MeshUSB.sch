@@ -940,4 +940,14 @@ F 3 "" H 7150 2450 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	7250 2600 7150 2600
+Text Label 5550 2000 0    60   ~ 0
+Charge+
+Text Label 2200 2550 0    60   ~ 0
+PV+
+Text Label 4200 2000 0    60   ~ 0
+CC1
+Text Label 9550 2000 0    60   ~ 0
+BatConn+
+Text Label 1450 5100 0    60   ~ 0
+USBPwrIn
 $EndSCHEMATC
