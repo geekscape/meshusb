@@ -69,7 +69,7 @@
       (place VR2 153840 -121190 front 0 (PN VR0603))
       (place R10 148500 -101250 front 180 (PN 270R))
       (place R4 155940 -127750 front 90 (PN 33k))
-      (place R5 157510 -127750 front 90 (PN 20k))
+      (place R5 157564 -127750 front 90 (PN 20k))
     )
     (component "_MUSB_MPD-BK-5033_2450BatteryHolder"
       (place "Li-Battery1" 148500 -115004 back 180 (PN BAT2))
@@ -123,6 +123,14 @@
       (place JP4 162080 -122860 front 270 (PN JUMPER))
       (place JP3 162042 -111030 front 270 (PN JUMPER))
       (place JP1 162042 -107020 front 90 (PN JUMPER))
+    )
+    (component _MUSB_:_MUSB_Fiducial
+      (place Fi1 143000 -103260 front 0 (PN CONN_1))
+      (place Fi2 134960 -119004 front 0 (PN CONN_1))
+      (place Fi3 162042 -119004 front 0 (PN CONN_1))
+    )
+    (component Pin_Arrays:PIN_ARRAY_1
+      (place P31 154000 -103750 front 0 (PN CONN_1))
     )
   )
   (library
@@ -361,6 +369,31 @@
       (pin Rect[T]Pad_500x900_um 2 650 0)
       (pin Rect[T]Pad_1500x203.2_um 2@1 0 0)
     )
+    (image _MUSB_:_MUSB_Fiducial
+      (outline (path signal 100  750 0  713.292 -231.763  606.763 -440.839  440.839 -606.763
+            231.763 -713.292  0 -750  -231.763 -713.292  -440.839 -606.763
+            -606.763 -440.839  -713.292 -231.763  -750 0  -713.292 231.763
+            -606.763 440.839  -440.839 606.763  -231.763 713.292  0 750
+            231.763 713.292  440.839 606.763  606.763 440.839  713.292 231.763))
+      (outline (path signal 100  750 0  713.292 -231.763  606.763 -440.839  440.839 -606.763
+            231.763 -713.292  0 -750  -231.763 -713.292  -440.839 -606.763
+            -606.763 -440.839  -713.292 -231.763  -750 0  -713.292 231.763
+            -606.763 440.839  -440.839 606.763  -231.763 713.292  0 750
+            231.763 713.292  440.839 606.763  606.763 440.839  713.292 231.763))
+      (pin Round[T]Pad_740_um @1 0 0)
+      (pin Round[B]Pad_750_um @2 0 0)
+    )
+    (image Pin_Arrays:PIN_ARRAY_1
+      (outline (path signal 152.4  1270 -1270  -1270 -1270))
+      (outline (path signal 152.4  -1270 1270  1270 1270))
+      (outline (path signal 152.4  -1270 -1270  -1270 1270))
+      (outline (path signal 152.4  1270 1270  1270 -1270))
+      (pin Rect[A]Pad_1524x1524_um 1 0 0)
+    )
+    (padstack Round[B]Pad_750_um
+      (shape (circle B.Cu 750))
+      (attach off)
+    )
     (padstack Round[A]Pad_1270_um
       (shape (circle F.Cu 1270))
       (shape (circle B.Cu 1270))
@@ -374,6 +407,10 @@
     (padstack Round[A]Pad_2540_um
       (shape (circle F.Cu 2540))
       (shape (circle B.Cu 2540))
+      (attach off)
+    )
+    (padstack Round[T]Pad_740_um
+      (shape (circle F.Cu 740))
       (attach off)
     )
     (padstack Rect[T]Pad_2290x890_um
@@ -457,15 +494,27 @@
     )
   )
   (network
+    (net /BatConn+
+      (pins "Li-Battery1"-1 "Li-Battery1"-1@1 P30-2 JP5-2)
+    )
+    (net /CC1
+      (pins R30-1 D30-3)
+    )
+    (net /Charge+
+      (pins U5-2 U5-8 C30-1 R30-2 D7-1 Q1-2 Q2-2 JP5-1)
+    )
+    (net /PV+
+      (pins P2-2 D30-2)
+    )
+    (net /USBPwrIn
+      (pins P1-4 F1-1)
+    )
     (net BAT+
       (pins H1-1 U2-2)
     )
     (net GND
       (pins P1-1 P2-1 U5-5 U5-9 C3-2 C4-2 VR1-2 VR2-2 R10-1 "Li-Battery1"-2 D6-1 H1-10
         U4-6 U4-16 C30-2 P30-1 D7-3 Q2-3 U2-3)
-    )
-    (net "Net-(C30-Pad1)"
-      (pins U5-2 U5-8 C30-1 R30-2 D7-1 Q1-2 Q2-2 JP5-1)
     )
     (net "Net-(C9-Pad1)"
       (pins C9-1 JP2-1)
@@ -485,20 +534,11 @@
     (net "Net-(D2-Pad2)"
       (pins D2-2 U4-10)
     )
-    (net "Net-(D30-Pad2)"
-      (pins P2-2 D30-2)
-    )
-    (net "Net-(D30-Pad3)"
-      (pins R30-1 D30-3)
-    )
     (net "Net-(D5-Pad2)"
       (pins R10-2 D5-2)
     )
     (net "Net-(D7-Pad2)"
       (pins D7-2)
-    )
-    (net "Net-(F1-Pad1)"
-      (pins P1-4 F1-1)
     )
     (net "Net-(H1-Pad2)"
       (pins H1-2 U4-4)
@@ -554,14 +594,14 @@
     (net "Net-(H2-Pad9)"
       (pins H2-9)
     )
-    (net "Net-(JP5-Pad2)"
-      (pins "Li-Battery1"-1 "Li-Battery1"-1@1 P30-2 JP5-2)
-    )
     (net "Net-(P1-Pad2)"
       (pins P1-2 R2-1 VR1-1)
     )
     (net "Net-(P1-Pad3)"
       (pins P1-3 R1-1 VR2-1)
+    )
+    (net "Net-(P31-Pad1)"
+      (pins U5-3 P31-1)
     )
     (net "Net-(Q1-Pad1)"
       (pins U5-6 Q1-1)
@@ -602,9 +642,6 @@
     (net "Net-(U5-Pad1)"
       (pins U5-1)
     )
-    (net "Net-(U5-Pad3)"
-      (pins U5-3)
-    )
     (net USB_VDD
       (pins F1-2 C3-1 R8-1 R9-1 D6-2 U4-15 D30-1)
     )
@@ -620,17 +657,16 @@
     (net _MT_PF3
       (pins R4-1 R5-1 JP3-2 JP3-2@1)
     )
-    (class kicad_default "" BAT+ GND "Net-(C30-Pad1)" "Net-(C9-Pad1)" "Net-(C9-Pad2)"
-      "Net-(D1-Pad1)" "Net-(D1-Pad2)" "Net-(D2-Pad1)" "Net-(D2-Pad2)" "Net-(D30-Pad2)"
-      "Net-(D30-Pad3)" "Net-(D5-Pad2)" "Net-(D7-Pad2)" "Net-(F1-Pad1)" "Net-(H1-Pad2)"
-      "Net-(H1-Pad3)" "Net-(H1-Pad4)" "Net-(H1-Pad5)" "Net-(H1-Pad6)" "Net-(H1-Pad7)"
-      "Net-(H1-Pad8)" "Net-(H1-Pad9)" "Net-(H2-Pad1)" "Net-(H2-Pad10)" "Net-(H2-Pad2)"
-      "Net-(H2-Pad3)" "Net-(H2-Pad4)" "Net-(H2-Pad5)" "Net-(H2-Pad6)" "Net-(H2-Pad7)"
-      "Net-(H2-Pad8)" "Net-(H2-Pad9)" "Net-(JP5-Pad2)" "Net-(P1-Pad2)" "Net-(P1-Pad3)"
-      "Net-(Q1-Pad1)" "Net-(Q1-Pad3)" "Net-(Q2-Pad1)" "Net-(R1-Pad2)" "Net-(R2-Pad2)"
-      "Net-(U4-Pad18)" "Net-(U4-Pad19)" "Net-(U4-Pad2)" "Net-(U4-Pad5)" "Net-(U4-Pad7)"
-      "Net-(U4-Pad8)" "Net-(U4-Pad9)" "Net-(U5-Pad1)" "Net-(U5-Pad3)" USB_VDD
-      VCCIO _MT_PE4 _MT_PF2 _MT_PF3
+    (class kicad_default "" BAT+ "Net-(C9-Pad1)" "Net-(C9-Pad2)" "Net-(D1-Pad1)"
+      "Net-(D1-Pad2)" "Net-(D2-Pad1)" "Net-(D2-Pad2)" "Net-(D5-Pad2)" "Net-(D7-Pad2)"
+      "Net-(H1-Pad2)" "Net-(H1-Pad3)" "Net-(H1-Pad4)" "Net-(H1-Pad5)" "Net-(H1-Pad6)"
+      "Net-(H1-Pad7)" "Net-(H1-Pad8)" "Net-(H1-Pad9)" "Net-(H2-Pad1)" "Net-(H2-Pad10)"
+      "Net-(H2-Pad2)" "Net-(H2-Pad3)" "Net-(H2-Pad4)" "Net-(H2-Pad5)" "Net-(H2-Pad6)"
+      "Net-(H2-Pad7)" "Net-(H2-Pad8)" "Net-(H2-Pad9)" "Net-(P1-Pad2)" "Net-(P1-Pad3)"
+      "Net-(P31-Pad1)" "Net-(Q1-Pad1)" "Net-(Q1-Pad3)" "Net-(Q2-Pad1)" "Net-(R1-Pad2)"
+      "Net-(R2-Pad2)" "Net-(U4-Pad18)" "Net-(U4-Pad19)" "Net-(U4-Pad2)" "Net-(U4-Pad5)"
+      "Net-(U4-Pad7)" "Net-(U4-Pad8)" "Net-(U4-Pad9)" "Net-(U5-Pad1)" VCCIO
+      _MT_PE4 _MT_PF2 _MT_PF3
       (circuit
         (use_via Via[0-1]_889:635_um)
       )
@@ -639,10 +675,30 @@
         (clearance 203.3)
       )
     )
+    (class 10thou /BatConn+ /CC1 /Charge+ /PV+ /USBPwrIn GND USB_VDD
+      (circuit
+        (use_via Via[0-1]_889:635_um)
+      )
+      (rule
+        (width 254)
+        (clearance 203.3)
+      )
+    )
+    (class 20thou
+      (circuit
+        (use_via Via[0-1]_889:635_um)
+      )
+      (rule
+        (width 508)
+        (clearance 203.3)
+      )
+    )
   )
   (wiring
-    (wire (path F.Cu 203.2  162080 -122210  157756 -122210  156962 -123004)(net "Net-(H2-Pad1)")(type protect))
-    (wire (path F.Cu 203.2  162042 -110380  157586 -110380  156962 -111004)(net "Net-(H2-Pad7)")(type protect))
-    (wire (path F.Cu 203.2  162042 -107670  162042 -109004)(net "Net-(H2-Pad8)")(type protect))
+    (wire (path F.Cu 203.2  157756 -122210  156962 -123004)(net "Net-(H2-Pad1)")(type protect))
+    (wire (path F.Cu 203.2  162080 -122210  157756 -122210)(net "Net-(H2-Pad1)")(type protect))
+    (wire (path F.Cu 203.2  157586 -110380  156962 -111004)(net "Net-(H2-Pad7)")(type protect))
+    (wire (path F.Cu 203.2  162042 -110380  157586 -110380)(net "Net-(H2-Pad7)")(type protect))
+    (wire (path F.Cu 203.2  162042 -107670  162042 -109004)(net _MT_PF2)(type protect))
   )
 )
