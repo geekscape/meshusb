@@ -39,6 +39,9 @@
     )
   )
   (placement
+    (component _MUSB_XBee_Board_OUTLINE_ONLY
+      (place U1 148501 -105004 front 0 (PN XBEE))
+    )
     (component "_MUSB_USB-A-PCB"
       (place P1 148501 -135690 front 180 (PN USB_4))
     )
@@ -60,11 +63,11 @@
     (component _MUSB_SM0603_Resistor
       (place R1 153840 -122740 front 180 (PN 22R))
       (place R2 143160 -122740 front 0 (PN 22R))
-      (place R8 152250 -127750 front 270 (PN 270))
-      (place R9 144700 -127750 front 270 (PN 270))
+      (place R8 152250 -127750 front 270 (PN 270R))
+      (place R9 144700 -127750 front 270 (PN 270R))
       (place VR1 143160 -121190 front 180 (PN VR0603))
       (place VR2 153840 -121190 front 0 (PN VR0603))
-      (place R10 148500 -101250 front 180 (PN 270))
+      (place R10 148500 -101250 front 180 (PN 270R))
       (place R4 155940 -127750 front 90 (PN 33k))
       (place R5 157510 -127750 front 90 (PN 20k))
     )
@@ -72,7 +75,7 @@
       (place "Li-Battery1" 148500 -115004 back 180 (PN BAT2))
     )
     (component LOGO
-      (place G0 166600 -103350 front 0 (PN LOGO))
+      (place G0 148500 -136270 back 180 (PN LOGO))
       (place G1 151900 -131340 front 0 (PN LOGO))
       (place VAL 145100 -131310 front 0 (PN "M9Logo-scaled"))
     )
@@ -93,11 +96,6 @@
     (component "_MUSB_SSOP20-FT231X"
       (place U4 148500 -120830 front 270 (PN "FT231X-SSOP"))
     )
-    (component _MUSB_SMTJumper
-      (place JP1 162042 -107020 front 90 (PN JUMPER))
-      (place JP4 162080 -122860 front 270 (PN JUMPER))
-      (place JP3 162042 -111030 front 270 (PN JUMPER))
-    )
     (component "_MUSB_3mmTH-1pin"
       (place 1PIN3 136000 -126860 front 0 (PN P***))
       (place 1PIN1 136000 -100860 front 0 (PN P***))
@@ -106,6 +104,7 @@
     )
     (component "_MUSB_:_MUSB_TH-Jumper_Default-Connected"
       (place JP2 140500 -128350 front 180 (PN CONN_TH_JMPR_DEFAULTCLOSED))
+      (place JP5 140040 -103260 front 90 (PN CONN_TH_JMPR_DEFAULTCLOSED))
     )
     (component "_MUSB_:_MUSB_JST-2mm-THs"
       (place P30 143000 -99250 front 0 (PN JST_2))
@@ -120,11 +119,19 @@
       (place Q2 148500 -108100 front 180 (PN "MOS_P-INFINEON-BSS83P"))
       (place U2 143000 -108100 front 180 (PN "AP7313-3.3VREGULATOR"))
     )
-    (component _MUSB_XBee_Board_OUTLINE_ONLY
-      (place U1 148501 -105004 front 0 (PN XBEE))
+    (component _MUSB_:_MUSB_SMTJumper
+      (place JP4 162080 -122860 front 270 (PN JUMPER))
+      (place JP3 162042 -111030 front 270 (PN JUMPER))
+      (place JP1 162042 -107020 front 90 (PN JUMPER))
     )
   )
   (library
+    (image _MUSB_XBee_Board_OUTLINE_ONLY
+      (outline (path signal 150  -8300 3800  -11000 1500))
+      (outline (path signal 150  8300 3800  10820 1640))
+      (outline (path signal 381  -12446 -19558  -12446 -20574))
+      (outline (path signal 381  12446 -19558  12446 -20574))
+    )
     (image "_MUSB_USB-A-PCB"
       (pin Rect[T]Pad_1600x7410_um 1 3500 1405)
       (pin Rect[T]Pad_1600x7410_um 4 -3500 1405)
@@ -310,11 +317,6 @@
       (pin Rect[T]Pad_406.4x1270_um 19 -2222.5 2667)
       (pin Rect[T]Pad_406.4x1270_um 20 -2857.5 2667)
     )
-    (image _MUSB_SMTJumper
-      (pin Rect[T]Pad_500x900_um 1 -650 0)
-      (pin Rect[T]Pad_500x900_um 2 650 0)
-      (pin Rect[T]Pad_1500x203.2_um 2@1 0 0)
-    )
     (image "_MUSB_3mmTH-1pin"
       (keepout "" (circle F.Cu 3000))
       (keepout "" (circle B.Cu 3000))
@@ -354,14 +356,10 @@
       (pin Rect[T]Pad_800.1x1000.76_um 2 952.5 -1099.82)
       (pin Rect[T]Pad_800.1x1000.76_um 1 -952.5 -1099.82)
     )
-    (image _MUSB_XBee_Board_OUTLINE_ONLY
-      (outline (path signal 381  -12446 0  -12446 254))
-      (outline (path signal 150  -6830 5100  -11000 1500))
-      (outline (path signal 150  6840 5100  10820 1640))
-      (outline (path signal 381  -12446 -19558  -12446 -20574))
-      (outline (path signal 381  12446 -19558  12446 -20574))
-      (outline (path signal 381  12446 0  12446 254))
-      (outline (path signal 381  -12446 -20574  12446 -20574))
+    (image _MUSB_:_MUSB_SMTJumper
+      (pin Rect[T]Pad_500x900_um 1 -650 0)
+      (pin Rect[T]Pad_500x900_um 2 650 0)
+      (pin Rect[T]Pad_1500x203.2_um 2@1 0 0)
     )
     (padstack Round[A]Pad_1270_um
       (shape (circle F.Cu 1270))
@@ -467,8 +465,7 @@
         U4-6 U4-16 C30-2 P30-1 D7-3 Q2-3 U2-3)
     )
     (net "Net-(C30-Pad1)"
-      (pins U5-2 U5-8 "Li-Battery1"-1 "Li-Battery1"-1@1 C30-1 P30-2 R30-2 D7-1 Q1-2
-        Q2-2)
+      (pins U5-2 U5-8 C30-1 R30-2 D7-1 Q1-2 Q2-2 JP5-1)
     )
     (net "Net-(C9-Pad1)"
       (pins C9-1 JP2-1)
@@ -557,6 +554,9 @@
     (net "Net-(H2-Pad9)"
       (pins H2-9)
     )
+    (net "Net-(JP5-Pad2)"
+      (pins "Li-Battery1"-1 "Li-Battery1"-1@1 P30-2 JP5-2)
+    )
     (net "Net-(P1-Pad2)"
       (pins P1-2 R2-1 VR1-1)
     )
@@ -626,11 +626,11 @@
       "Net-(H1-Pad3)" "Net-(H1-Pad4)" "Net-(H1-Pad5)" "Net-(H1-Pad6)" "Net-(H1-Pad7)"
       "Net-(H1-Pad8)" "Net-(H1-Pad9)" "Net-(H2-Pad1)" "Net-(H2-Pad10)" "Net-(H2-Pad2)"
       "Net-(H2-Pad3)" "Net-(H2-Pad4)" "Net-(H2-Pad5)" "Net-(H2-Pad6)" "Net-(H2-Pad7)"
-      "Net-(H2-Pad8)" "Net-(H2-Pad9)" "Net-(P1-Pad2)" "Net-(P1-Pad3)" "Net-(Q1-Pad1)"
-      "Net-(Q1-Pad3)" "Net-(Q2-Pad1)" "Net-(R1-Pad2)" "Net-(R2-Pad2)" "Net-(U4-Pad18)"
-      "Net-(U4-Pad19)" "Net-(U4-Pad2)" "Net-(U4-Pad5)" "Net-(U4-Pad7)" "Net-(U4-Pad8)"
-      "Net-(U4-Pad9)" "Net-(U5-Pad1)" "Net-(U5-Pad3)" USB_VDD VCCIO _MT_PE4
-      _MT_PF2 _MT_PF3
+      "Net-(H2-Pad8)" "Net-(H2-Pad9)" "Net-(JP5-Pad2)" "Net-(P1-Pad2)" "Net-(P1-Pad3)"
+      "Net-(Q1-Pad1)" "Net-(Q1-Pad3)" "Net-(Q2-Pad1)" "Net-(R1-Pad2)" "Net-(R2-Pad2)"
+      "Net-(U4-Pad18)" "Net-(U4-Pad19)" "Net-(U4-Pad2)" "Net-(U4-Pad5)" "Net-(U4-Pad7)"
+      "Net-(U4-Pad8)" "Net-(U4-Pad9)" "Net-(U5-Pad1)" "Net-(U5-Pad3)" USB_VDD
+      VCCIO _MT_PE4 _MT_PF2 _MT_PF3
       (circuit
         (use_via Via[0-1]_889:635_um)
       )

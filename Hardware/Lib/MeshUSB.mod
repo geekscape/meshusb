@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  Mon 24 Feb 2014 21:04:34 EST
+PCBNEW-LibModule-V1  Wed 26 Feb 2014 15:23:01 EST
 # encoding utf-8
 Units mm
 $INDEX
@@ -8,6 +8,7 @@ _MUSB-FEMALE-HEADER-NPPN101BFLC-RC-Pin1Left
 _MUSB-FEMALE-HEADER-NPPN101BFLD-RC-Pin1Right
 _MUSB_3mmTH-1pin
 _MUSB_DO-214BA-Schottky
+_MUSB_Fiducial
 _MUSB_JST-2mm-THs
 _MUSB_LED-0603
 _MUSB_MF-MSMF050-Fuse
@@ -531,6 +532,33 @@ Ne 0 ""
 Po -2.31 0
 $EndPAD
 $EndMODULE _MUSB_DO-214BA-Schottky
+$MODULE _MUSB_Fiducial
+Po 0 0 0 15 5265E751 00000000 ~~
+Li _MUSB_Fiducial
+Sc 0
+AR 
+Op 0 0 0
+T0 0 0 1 1 0 0.15 N V 21 N "REF**"
+T1 0.205 -3.26 1.5 1.5 0 0.15 N I 21 N "VAL**"
+DC 0 0 0.75 0 0.1 20
+DC 0 0 0.75 0 0.1 21
+$PAD
+Sh "" C 0.74 0.74 0 0 0
+Dr 0 0 0
+At SMD N 00808000
+Ne 0 ""
+Po 0 0
+.LocalClearance 0.375
+$EndPAD
+$PAD
+Sh "" C 0.75 0.75 0 0 0
+Dr 0 0 0
+At SMD N 00400001
+Ne 0 ""
+Po 0 0
+.LocalClearance 0.375
+$EndPAD
+$EndMODULE _MUSB_Fiducial
 $MODULE _MUSB_JST-2mm-THs
 Po 0 0 0 15 530AD17F 00000000 ~~
 Li _MUSB_JST-2mm-THs

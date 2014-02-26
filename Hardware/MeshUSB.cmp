@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-12-14 BZR 4555)-product date = Mon 24 Feb 2014 19:58:38 EST
+Cmp-Mod V01 Created by CvPcb (2013-12-14 BZR 4555)-product date = Wed 26 Feb 2014 15:23:45 EST
 
 BeginCmp
 TimeStamp = /522EE470;
@@ -81,21 +81,21 @@ BeginCmp
 TimeStamp = /53044226;
 Reference = Fi1;
 ValeurCmp = CONN_1;
-IdModule  = ;
+IdModule  = _MUSB_:_MUSB_Fiducial;
 EndCmp
 
 BeginCmp
 TimeStamp = /5304423A;
 Reference = Fi2;
 ValeurCmp = CONN_1;
-IdModule  = ;
+IdModule  = _MUSB_:_MUSB_Fiducial;
 EndCmp
 
 BeginCmp
 TimeStamp = /5304424E;
 Reference = Fi3;
 ValeurCmp = CONN_1;
-IdModule  = ;
+IdModule  = _MUSB_:_MUSB_Fiducial;
 EndCmp
 
 BeginCmp
@@ -141,6 +141,13 @@ IdModule  = _MUSB_:_MUSB_SMTJumper;
 EndCmp
 
 BeginCmp
+TimeStamp = /530D4AD8;
+Reference = JP5;
+ValeurCmp = CONN_TH_JMPR_DEFAULTCLOSED;
+IdModule  = _MUSB_:_MUSB_TH-Jumper_Default-Connected;
+EndCmp
+
+BeginCmp
 TimeStamp = /522EB9C4;
 Reference = Li-Battery1;
 ValeurCmp = BAT2;
@@ -166,6 +173,13 @@ TimeStamp = /5307F372;
 Reference = P30;
 ValeurCmp = JST_2;
 IdModule  = _MUSB_:_MUSB_JST-2mm-THs;
+EndCmp
+
+BeginCmp
+TimeStamp = /530D6B17;
+Reference = P31;
+ValeurCmp = CONN_1;
+IdModule  = Pin_Arrays:PIN_ARRAY_1;
 EndCmp
 
 BeginCmp
@@ -213,21 +227,21 @@ EndCmp
 BeginCmp
 TimeStamp = /522FF148;
 Reference = R8;
-ValeurCmp = 270;
+ValeurCmp = 270R;
 IdModule  = _MUSB_SM0603_Resistor;
 EndCmp
 
 BeginCmp
 TimeStamp = /522FF155;
 Reference = R9;
-ValeurCmp = 270;
+ValeurCmp = 270R;
 IdModule  = _MUSB_SM0603_Resistor;
 EndCmp
 
 BeginCmp
 TimeStamp = /52316266;
 Reference = R10;
-ValeurCmp = 270;
+ValeurCmp = 270R;
 IdModule  = _MUSB_SM0603_Resistor;
 EndCmp
 

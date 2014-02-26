@@ -302,7 +302,7 @@ F 3 "" H 9200 3800 60  0000 C CNN
 	1    9200 3800
 	1    0    0    -1  
 $EndComp
-Text Notes 7050 2400 0    60   ~ 0
+Text Notes 7200 2350 0    60   ~ 0
 ADJ -> Vcc \n= 4.2v Vout.\nADJ  -> NC\n=4.1v Vout.
 $Comp
 L LED D5
@@ -326,8 +326,8 @@ F 3 "" H 9900 2400 30  0000 C CNN
 	1    9900 2400
 	1    0    0    -1  
 $EndComp
-Text Notes 9150 3550 0    60   ~ 0
-Optional Charge \nFull Indicator...\nOtherwise NC HBO\n...Active High!\nSeems this doesn't light when MT is inserted, \nthink this should be fixed by changes to charging diodes.
+Text Notes 9350 3350 0    60   ~ 0
+Charge Full Indicator...\n...Active High!\nSeems this doesn't light when MT is inserted, \nthink this should be fixed by changes to charging diodes.
 Text Notes 3650 2750 0    60   ~ 0
 R3 chosen to limit shunt current to 50mA.\n(4.5v-3.2v)/10=130mA max charge current.\n(4.5v-3.2v)^2/10=169mW PwrDiss\n(4.5v-4.1v)/40=mA max shunt current.\n
 $Comp
@@ -522,7 +522,6 @@ NoConn ~ 5950 4900
 NoConn ~ 9500 5100
 Text Notes 3650 1600 0    60   ~ 0
 Charging max values\ncharge I - 125mA=1C battery\nPwrDiss - 2W - depends on R30\nshunt I - 50 mA\n
-NoConn ~ 7250 2600
 $Comp
 L CONN_1 Fi1
 U 1 1 53044226
@@ -597,10 +596,10 @@ F 3 "" H 10800 2600 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 Text Notes 11050 2500 0    60   ~ 0
-Exposed pins for charging... User must be careful!\nDo these as JST 2mm?
+Exposed pins for charging... User must be careful!\nDo these as JST 2mm? Yes.
 Text Notes 8500 800  0    60   ~ 0
 V.Div. Gives limited range. Get numbers from spreadsheet.
-Text Notes 650  2400 0    60   ~ 0
+Text Notes 650  2150 0    60   ~ 0
 Approx. 6V max. without further current limiting. \nDiode forward current max. is 500mA.
 Text Notes 5000 4600 0    39   ~ 0
 This is for disabling \nsoft reset ~DTR.\nMake as two .254mm THs \nconnected by default.
@@ -834,8 +833,6 @@ Wire Wire Line
 Wire Wire Line
 	4200 2000 4350 2000
 Wire Wire Line
-	4850 2000 10350 2000
-Wire Wire Line
 	6000 2300 6000 2000
 Connection ~ 6000 2000
 Wire Wire Line
@@ -915,4 +912,32 @@ F 3 "" H 3800 1900 60  0000 C CNN
 	1    3900 2000
 	1    0    0    -1  
 $EndComp
+$Comp
+L CONN_TH_JMPR_DEFAULTCLOSED JP5
+U 1 1 530D4AD8
+P 9300 2000
+F 0 "JP5" H 9250 1900 40  0000 L CNN
+F 1 "CONN_TH_JMPR_DEFAULTCLOSED" H 9300 2100 30  0001 C CNN
+F 2 "" H 9300 2000 60  0000 C CNN
+F 3 "" H 9300 2000 60  0000 C CNN
+	1    9300 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 2000 10350 2000
+Wire Wire Line
+	4850 2000 9050 2000
+$Comp
+L CONN_1 P31
+U 1 1 530D6B17
+P 7150 2450
+F 0 "P31" H 7230 2450 40  0000 L CNN
+F 1 "CONN_1" H 7150 2505 30  0001 C CNN
+F 2 "" H 7150 2450 60  0000 C CNN
+F 3 "" H 7150 2450 60  0000 C CNN
+	1    7150 2450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7250 2600 7150 2600
 $EndSCHEMATC
