@@ -302,8 +302,8 @@ F 3 "" H 9200 3800 60  0000 C CNN
 	1    9200 3800
 	1    0    0    -1  
 $EndComp
-Text Notes 7200 2350 0    60   ~ 0
-ADJ -> Vcc \n= 4.2v Vout.\nADJ  -> NC\n=4.1v Vout.
+Text Notes 6800 2300 0    60   ~ 0
+ADJ -> Vcc= 4.2v Vout.\nADJ -> NC=4.1v Vout.\nADJ -> GND=4.0v Vout.
 $Comp
 L LED D5
 U 1 1 52316257
