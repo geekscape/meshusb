@@ -1,0 +1,37 @@
+### Module positions - created on Wed 05 Mar 2014 17:09:12 EST ###
+### Printed by Pcbnew version pcbnew (2013-12-14 BZR 4555)-product
+## Unit = mm, Angle = deg.
+## Side : All
+# Ref    Val                  Package         PosX       PosY        Rot     Side
+C3       100n             SM0603_Cap         20.5000    22.4500       0.0    F.Cu
+C4       100n             SM0603_Cap          9.8200    22.4500     180.0    F.Cu
+C9       100n             SM0603_Cap          9.8200    24.0000       0.0    F.Cu
+C30      100n             SM0603_Cap         20.5000    24.0000     180.0    F.Cu
+D1       RX_LED           LED-0603           20.3100    14.3100      90.0    F.Cu
+D2       TX_LED           LED-0603           10.0100    14.3400      90.0    F.Cu
+D5       LED              LED-0603           15.1600    42.8400     270.0    F.Cu
+D6       ZENER            SMAZ5V6-Zener      15.2100    27.2900       0.0    F.Cu
+D7       DIODE-NC         SOT23-3             9.6600    27.0900      90.0    F.Cu
+D30      DUAL_SHOTTKEY_PA SOT23-3            20.6300    33.9900     270.0    F.Cu
+F1       FUSE             MF-MSMF050         15.1600    14.3400       0.0    F.Cu
+Fi1      Fiducial         Fiducial            9.6600    38.8300       0.0    F.Cu
+Fi2      Fiducial         Fiducial            1.6200    23.0860       0.0    F.Cu
+Fi3      Fiducial         Fiducial           28.7020    23.0860       0.0    F.Cu
+H1       XBeeLeftPins     FEMALE-HEADER2mm    4.1600    28.0860     180.0    F.Cu
+H2       XBeeRightPins    FEMALE-HEADER2mm   26.1620    28.0860       0.0    F.Cu
+Q1       MOS_P            SOT23-3            20.6600    27.0900      90.0    F.Cu
+Q2       MOS_P-INFINEON-B SOT23-3            15.1600    33.9900     270.0    F.Cu
+R1       22R              SM0603_Res         20.5000    19.3500     180.0    F.Cu
+R2       22R              SM0603_Res          9.8200    19.3500       0.0    F.Cu
+R4       33k              SM0603_Res         22.6000    14.3400      90.0    F.Cu
+R5       20k              SM0603_Res         24.2240    14.3400      90.0    F.Cu
+R8       270R             SM0603_Res         18.9100    14.3400     270.0    F.Cu
+R9       270R             SM0603_Res         11.3600    14.3400     270.0    F.Cu
+R10      270R             SM0603_Res         15.1600    40.8400     180.0    F.Cu
+R30      16R              TE3521-6.3x3.2mm   15.1600    37.7400     180.0    F.Cu
+U2       AP7313-3.3VREGUL SOT23-3             9.6600    33.9900     270.0    F.Cu
+U4       FT231X-SSOP      FT231X-SSOP20      15.1600    21.2600       0.0    F.Cu
+U5       LTC4070          SSOP8-9            15.1600    30.5900       0.0    F.Cu
+VR1      VR0603           SM0603_Res          9.8200    20.9000     180.0    F.Cu
+VR2      VR0603           SM0603_Res         20.5000    20.9000       0.0    F.Cu
+## End
