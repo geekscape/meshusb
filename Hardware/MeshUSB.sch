@@ -29,9 +29,9 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:MeshUSB
 LIBS:ATMega256RFR2
 LIBS:opendous
+LIBS:MeshUSB
 LIBS:MeshUSB-cache
 EELAYER 24 0
 EELAYER END
@@ -265,7 +265,7 @@ F 3 "" H 2600 5550 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Text Notes 2600 7600 0    49   ~ 0
-MTTF Max Power can be set to allow for up to 500mA on the USB bus.\n200mA is probably the max recommended - shouldn't need more under any circumstances.\nDefault stays at 90mA for now.
+MTTF Max Power can be set to allow for up to 500mA on the USB bus.\n200mA is probably the max recommended - shouldn't need more under any circumstances.\nDefault stays at 90mA for now - 5V cannot draw that much anyhow with current values.
 $Comp
 L LTC4070 U5
 U 1 1 52312087
@@ -303,7 +303,7 @@ F 3 "" H 9200 3800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 6800 2300 0    60   ~ 0
-ADJ -> Vcc= 4.2v Vout.\nADJ -> NC=4.1v Vout.\nADJ -> GND=4.0v Vout.
+ADJ -> Vcc= 4.2v Vout.\nADJ -> NC (Default) =4.1v Vout.\nADJ -> GND=4.0v Vout.
 $Comp
 L LED D5
 U 1 1 52316257
@@ -326,10 +326,10 @@ F 3 "" H 9900 2400 30  0000 C CNN
 	1    9900 2400
 	1    0    0    -1  
 $EndComp
-Text Notes 9350 3350 0    60   ~ 0
-Charge Full Indicator...\n...Active High!\nSeems this doesn't light when MT is inserted, \nthink this should be fixed by changes to charging diodes.
-Text Notes 3650 2750 0    60   ~ 0
-R3 chosen to limit shunt current to 50mA.\n(4.5v-3.2v)/10=130mA max charge current.\n(4.5v-3.2v)^2/10=169mW PwrDiss\n(4.5v-4.1v)/40=mA max shunt current.\n
+Text Notes 9350 3200 0    60   ~ 0
+Charge Full Indicator - Active High!\nSeems this lights prematurely in v0.3...
+Text Notes 2750 2850 0    60   ~ 0
+Old calculation from when DRV pass transistor was not utilized:\nR3 chosen to limit shunt current to 50mA.\n(4.5v-3.2v)/10=130mA max charge current.\n(4.5v-3.2v)^2/10=169mW PwrDiss\n(4.5v-4.1v)/40=mA max shunt current.\n
 $Comp
 L CONN_10 H1
 U 1 1 5232A47B
@@ -382,25 +382,14 @@ NoConn ~ 5950 4600
 NoConn ~ 5950 4800
 NoConn ~ 5950 5000
 NoConn ~ 5950 5100
-Text Notes 6200 5450 0    60   ~ 0
-Conn_10s are for the smd headers in case I don't get around to\nincorporating them in a 20 pin xbee ff footprint.
+Text Notes 7200 5500 0    60   ~ 0
+Conn_10s are for the smd headers. \n20 pin xbee is just for visual reference.
 Text Notes 7150 1250 0    60   ~ 0
-PMOS1 does Low Battery cutoff.
+PMOS1 does Low Battery cutoff.\nMay not be entirely necessary as the \n3.3v regulator will also dropout.
 Text GLabel 5950 1350 0    60   Input ~ 0
 BAT+
 Text Notes 4400 2350 0    60   ~ 0
 Fw Drop Approx. \n0.2V @ 100mA\n0.3V @ 500mA\n
-$Comp
-L MOS_P-INFINEON-BSS83P Q1
-U 1 1 52355F92
-P 7600 1450
-F 0 "Q1" H 7600 1640 60  0000 R CNN
-F 1 "MOS_P" H 7600 1270 60  0000 R CNN
-F 2 "" H 7600 1450 60  0000 C CNN
-F 3 "" H 7600 1450 60  0000 C CNN
-	1    7600 1450
-	0    -1   -1   0   
-$EndComp
 $Comp
 L GND #PWR05
 U 1 1 5235B126
@@ -419,8 +408,8 @@ NoConn ~ 5150 5850
 NoConn ~ 5150 5750
 NoConn ~ 5150 5550
 NoConn ~ 5150 5450
-Text Notes 850  3950 0    60   ~ 0
-Still TODO for v0.3:\nLayout Fiducials.\nJumpers for... what needs jumpers? Something must. \n  Cutoff battery charging. Charge full indicator? Tx/Rx LEDs? USB vdd?\nTest points?\nJump pads for 4070 AJD?\n
+Text Notes 600  900  0    60   ~ 0
+TODO for v0.4:\nTest points\nLook at R30 power resistor value.\nConsider removing Q1 LBO\n
 $Comp
 L ZENER D6
 U 1 1 5254E5F2
@@ -431,17 +420,6 @@ F 2 "" H 3000 6050 60  0000 C CNN
 F 3 "" H 3000 6050 60  0000 C CNN
 	1    3000 6050
 	0    -1   -1   0   
-$EndComp
-$Comp
-L AP7313-3.3VREGULATOR U2
-U 1 1 52564B55
-P 6500 1400
-F 0 "U2" H 6700 1200 40  0000 C CNN
-F 1 "AP7313-3.3VREGULATOR" H 6200 1600 40  0000 L CNN
-F 2 "" H 6500 1500 30  0000 C CIN
-F 3 "" H 6500 1400 60  0000 C CNN
-	1    6500 1400
-	-1   0    0    -1  
 $EndComp
 $Comp
 L R R30
@@ -595,12 +573,12 @@ F 3 "" H 10800 2600 60  0000 C CNN
 	1    10800 2600
 	1    0    0    1   
 $EndComp
-Text Notes 11050 2500 0    60   ~ 0
-Exposed pins for charging... User must be careful!\nDo these as JST 2mm? Yes.
+Text Notes 10900 2750 0    60   ~ 0
+Exposed THs for seperate battery \nor possibly !charging!... \nUser must be careful!\nJST 2mm.
 Text Notes 8500 800  0    60   ~ 0
-V.Div. Gives limited range. Get numbers from spreadsheet.
+V.Div. Gives limited range. \nGet numbers from design calcuations spreadsheet.\nDrive PE4 LOW to enable PF3, otherwise PE4 HI-Z to disable.
 Text Notes 650  2150 0    60   ~ 0
-Approx. 6V max. without further current limiting. \nDiode forward current max. is 500mA.
+Approx. 9V max. without further current limiting. \nDiode forward current max. is 500mA.
 Text Notes 5000 4600 0    39   ~ 0
 This is for disabling \nsoft reset ~DTR.\nMake as two .254mm THs \nconnected by default.
 Wire Wire Line
@@ -868,28 +846,6 @@ Wire Wire Line
 	5850 5350 5850 4400
 Wire Wire Line
 	5850 4400 5950 4400
-$Comp
-L CONN_TH_JMPR_DEFAULTCLOSED JP2
-U 1 1 5308067F
-P 5500 4700
-F 0 "JP2" H 5450 4600 40  0000 L CNN
-F 1 "CONN_TH_JMPR_DEFAULTCLOSED" H 5500 4800 30  0001 C CNN
-F 2 "" H 5500 4700 60  0000 C CNN
-F 3 "" H 5500 4700 60  0000 C CNN
-	1    5500 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L MOS_P-INFINEON-BSS83P Q2
-U 1 1 53080F7D
-P 8800 3000
-F 0 "Q2" H 8800 3190 60  0000 R CNN
-F 1 "MOS_P-INFINEON-BSS83P" H 8800 2820 60  0001 R CNN
-F 2 "" H 8800 3000 60  0000 C CNN
-F 3 "" H 8800 3000 60  0000 C CNN
-	1    8800 3000
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	8550 3000 8600 3000
 Connection ~ 8900 2000
@@ -901,28 +857,6 @@ Wire Wire Line
 Connection ~ 9150 2750
 Wire Wire Line
 	8900 2000 8900 2800
-$Comp
-L DUAL_SHOTTKEY_PACKAGE D30
-U 1 1 530A8D87
-P 3900 2000
-F 0 "D30" H 3750 2250 40  0000 C CNN
-F 1 "DUAL_SHOTTKEY_PACKAGE" H 4000 1750 40  0000 C CNN
-F 2 "" H 3800 1900 60  0000 C CNN
-F 3 "" H 3800 1900 60  0000 C CNN
-	1    3900 2000
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_TH_JMPR_DEFAULTCLOSED JP5
-U 1 1 530D4AD8
-P 9300 2000
-F 0 "JP5" H 9250 1900 40  0000 L CNN
-F 1 "CONN_TH_JMPR_DEFAULTCLOSED" H 9300 2100 30  0001 C CNN
-F 2 "" H 9300 2000 60  0000 C CNN
-F 3 "" H 9300 2000 60  0000 C CNN
-	1    9300 2000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9550 2000 10350 2000
 Wire Wire Line
@@ -950,4 +884,70 @@ Text Label 9550 2000 0    60   ~ 0
 BatConn+
 Text Label 1450 5100 0    60   ~ 0
 USBPwrIn
+$Comp
+L Dual_Shottkey_Package D30
+U 1 1 535F13DD
+P 3900 2000
+F 0 "D30" H 3750 2250 40  0000 C CNN
+F 1 "Dual_Shottkey_Package" H 4000 1750 40  0000 C CNN
+F 2 "" H 3800 1900 60  0000 C CNN
+F 3 "" H 3800 1900 60  0000 C CNN
+	1    3900 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L AP7313-3.3VRegulator U2
+U 1 1 535F1785
+P 6500 1400
+F 0 "U2" H 6700 1200 40  0000 C CNN
+F 1 "AP7313-3.3VRegulator" H 6200 1600 40  0000 L CNN
+F 2 "" H 6500 1500 30  0000 C CIN
+F 3 "" H 6500 1400 60  0000 C CNN
+	1    6500 1400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MOS_P-Infineon-BSS83P Q1
+U 1 1 535F1C72
+P 7600 1450
+F 0 "Q1" H 7600 1640 60  0000 R CNN
+F 1 "MOS_P" H 7600 1270 60  0000 R CNN
+F 2 "" H 7600 1450 60  0000 C CNN
+F 3 "" H 7600 1450 60  0000 C CNN
+	1    7600 1450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MOS_P-Infineon-BSS83P Q2
+U 1 1 53620863
+P 8800 3000
+F 0 "Q2" H 8800 3190 60  0000 R CNN
+F 1 "MOS_P" H 9200 2850 60  0000 R CNN
+F 2 "" H 8800 3000 60  0000 C CNN
+F 3 "" H 8800 3000 60  0000 C CNN
+	1    8800 3000
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_TH_JMPR_DefaultClosed JP2
+U 1 1 5362E81E
+P 5500 4700
+F 0 "JP2" H 5450 4600 40  0000 L CNN
+F 1 "CONN_TH_JMPR_DefaultClosed" H 5500 4800 30  0001 C CNN
+F 2 "" H 5500 4700 60  0000 C CNN
+F 3 "" H 5500 4700 60  0000 C CNN
+	1    5500 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_TH_JMPR_DefaultClosed JP5
+U 1 1 5362EB08
+P 9300 2000
+F 0 "JP5" H 9250 1900 40  0000 L CNN
+F 1 "CONN_TH_JMPR_DefaultClosed" H 9300 2100 30  0001 C CNN
+F 2 "" H 9300 2000 60  0000 C CNN
+F 3 "" H 9300 2000 60  0000 C CNN
+	1    9300 2000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

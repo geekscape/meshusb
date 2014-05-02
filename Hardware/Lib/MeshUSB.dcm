@@ -1,17 +1,5 @@
 EESchema-DOCLIB  Version 2.0
 #
-$CMP AP7313-3.3VREGULATOR
-D LM1084IS, 5A 29V Adjustable Linear Regulator, TO-263 (D2-PAK)
-K Adjustable Voltage Regulator 5A Positive
-F http://www.ti.com/lit/ds/symlink/lm1084.pdf
-$ENDCMP
-#
-$CMP AP7313R-3.3VREGULATOR
-D LM1084IS, 5A 29V Adjustable Linear Regulator, TO-263 (D2-PAK)
-K Adjustable Voltage Regulator 5A Positive
-F http://www.ti.com/lit/ds/symlink/lm1084.pdf
-$ENDCMP
-#
 $CMP ATMEGA16U2
 D ATMEGA16u2
 $ENDCMP
@@ -42,11 +30,6 @@ D Diode simple
 K DEV DIODE
 $ENDCMP
 #
-$CMP DUAL_SHOTTKEY_PACKAGE
-D Diode schottky
-K DEV DIODE
-$ENDCMP
-#
 $CMP FDN340P
 F transistors/mos/*.*
 $ENDCMP
@@ -54,10 +37,6 @@ $ENDCMP
 $CMP LM317_SOT223
 D LM317 Voltage Regulator (SOT223)
 F regulator/lm117.pdf
-$ENDCMP
-#
-$CMP MOS_P-INFINEON-BSS83P
-F transistors/mos/*.*
 $ENDCMP
 #
 $CMP MOSFET_P
